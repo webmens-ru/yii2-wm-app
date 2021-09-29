@@ -18,6 +18,10 @@ $config = [
             'forceCopy' => true,
         ],
         'request' => [
+            'parsers' => [
+				'application/json' => 'yii\web\JsonParser',
+			],		
+			'baseUrl'=> '',
             // !!! Сгенерировать и вставить ключ
             'cookieValidationKey' => '',
         ],
