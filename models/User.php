@@ -1,39 +1,37 @@
 <?php
-
 namespace app\models;
 
-class User extends \yii\base\BaseObject implements \yii\web\IdentityInterface
+use yii\db\ActiveRecord;
+use Yii;
+
+class User extends ActiveRecord implements \yii\web\IdentityInterface
 {
-    public $id;
-    public $username;
-    public $password;
-    public $authKey;
-    public $accessToken;
 
-    private static $users = [
-        '100' => [
-            'id' => '100',
-            'username' => 'admin',
-            'password' => 'admin',
-            'authKey' => 'test100key',
-            'accessToken' => '100-token',
-        ],
-        '101' => [
-            'id' => '101',
-            'username' => 'demo',
-            'password' => 'demo',
-            'authKey' => 'test101key',
-            'accessToken' => '101-token',
-        ],
-    ];
-
+    public static function tableName()
+    {
+        return 'users';
+    }
+//    public function tableName() {
+//        return 'users';
+//    }
 
     /**
      * {@inheritdoc}
      */
+    public function rules()
+    {
+        return [
+            [['username', 'password'], 'required'],
+            [['b24_user_id'], 'integer'],
+            [['name', 'last_name', 'access_token', 'auth_key'], 'string', 'max' => 255],
+            [['date_expired'], 'safe'],
+            ['username', 'unique', 'targetClass' => User::className(), 'message' => 'Этот логин уже занят'],
+        ];
+    }
+
     public static function findIdentity($id)
     {
-        return isset(self::$users[$id]) ? new static(self::$users[$id]) : null;
+        return self::findOne($id);
     }
 
     /**
@@ -41,13 +39,7 @@ class User extends \yii\base\BaseObject implements \yii\web\IdentityInterface
      */
     public static function findIdentityByAccessToken($token, $type = null)
     {
-        foreach (self::$users as $user) {
-            if ($user['accessToken'] === $token) {
-                return new static($user);
-            }
-        }
-
-        return null;
+        return self::findOne(['access_token' => $token]);
     }
 
     /**
@@ -58,13 +50,14 @@ class User extends \yii\base\BaseObject implements \yii\web\IdentityInterface
      */
     public static function findByUsername($username)
     {
-        foreach (self::$users as $user) {
-            if (strcasecmp($user['username'], $username) === 0) {
-                return new static($user);
-            }
-        }
+        return self::findOne(['username' => $username]);
+    }
 
-        return null;
+    public static function findByBitrixId($id)
+    {
+//        Yii::warning($id, '$id');
+//        Yii::warning(self::findOne(['b24_user_id' => $id]), 'user');
+        return self::findOne(['b24_user_id' => $id]);
     }
 
     /**
@@ -80,7 +73,7 @@ class User extends \yii\base\BaseObject implements \yii\web\IdentityInterface
      */
     public function getAuthKey()
     {
-        return $this->authKey;
+        return $this->auth_key;
     }
 
     /**
@@ -88,7 +81,7 @@ class User extends \yii\base\BaseObject implements \yii\web\IdentityInterface
      */
     public function validateAuthKey($authKey)
     {
-        return $this->authKey === $authKey;
+        return $this->auth_key === $authKey;
     }
 
     /**
@@ -99,6 +92,58 @@ class User extends \yii\base\BaseObject implements \yii\web\IdentityInterface
      */
     public function validatePassword($password)
     {
-        return $this->password === $password;
+//        return $this->password === $password;
+        return \Yii::$app->security->validatePassword($password, $this->password);
     }
+
+    public function generateAuthKey()
+    {
+        $this->auth_key = \Yii::$app->security->generateRandomString();
+    }
+
+    public function generateAccessToken()
+    {
+$timestamp = time() + 3600 * (11);
+        //echo $timestamp;
+        $datetimeFormat = 'Y-m-d H:i:s';
+        $date = new \DateTime('now', new \DateTimeZone('Europe/Moscow'));
+        $date->setTimestamp($timestamp);
+        $this->date_expired = $date->format($datetimeFormat);
+        Yii::warning($this->date_expired, '');
+//------------------------------------
+
+        $this->access_token = \Yii::$app->security->generateRandomString();
+        $this->auth_key = $this->access_token;
+    }
+
+//    public function generateAccessTokenTest() {        
+//        Yii::warning(date( "Y-m-d h:i:s", strtotime( date("Y-m-d h:i:s")."+1 hours")), 'date');
+//    }
+
+    public function getAccessToken()
+    {
+        if (!$this->access_token || $this->date_expired < date('Y-m-d h:i:s')) {
+            $this->generateAccessToken();
+        }
+
+        return $this->access_token;
+    }
+
+    public static function generatePassword($length = 10)
+    {
+        $permitted_chars = '0123456789abcdefghijklmnopqrstuvwxyz';
+        // Output: 54esmdr0qf
+        return substr(str_shuffle($permitted_chars), 0, $length);
+    }
+//    public static function b24Login($b24Id) {
+////        if ($this->validate()) {
+////            if ($this->rememberMe) {
+//                $user = static::findByBitrixId($b24Id);
+//                $user->generateAccessToken();
+//                $user->save();
+////            }
+//            return Yii::$app->user->login($this->getUser(), $this->rememberMe ? 3600 * 24 * 30 : 0);
+////        }
+//        return false;
+//    }
 }
