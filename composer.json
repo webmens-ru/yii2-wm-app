@@ -13,10 +13,9 @@
         "yiisoft/yii2-swiftmailer": "~2.0.0 || ~2.1.0",
         "webmens-ru/bitrix24-php-sdk": "@dev",
         "monolog/monolog": "^1.25",
-        "rmrevin/yii2-fontawesome": "~3.5",
-        "kartik-v/yii2-widget-select2": "@dev",
-        "kartik-v/yii2-widget-fileinput": "dev-master",
-        "phpoffice/phpspreadsheet": "^1.18"
+        "webmrns-ru/yii-extended": "dev-master",
+        "webmens-ru/yii2-admin": "dev-master",
+        "webmens-ru/b24-tools": "dev-master"        
     },
     "require-dev": {
         "yiisoft/yii2-debug": "~2.1.0",
