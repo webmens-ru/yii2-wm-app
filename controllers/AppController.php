@@ -8,15 +8,12 @@ use yii\helpers\ArrayHelper;
 use yii\web\Controller;
 
 class AppController extends Controller {
+    
+    protected $accessToken = null;
 
     public function beforeAction($action) {
         $this->enableCsrfValidation = false;
-//        if (in_array($action->id, ['add-portal-auth'])) {
-//            return parent::beforeAction($action);
-//        }
-
         $request = Yii::$app->request;
-//        $session = Yii::$app->session;
 
         if ($request->get('DOMAIN') && $request->post('member_id') && $request->post('AUTH_ID') && $request->post('REFRESH_ID')) {
             $component24 = new \wm\b24tools\b24Tools();
@@ -25,13 +22,8 @@ class AppController extends Controller {
             if ($errors) {
                 throw new HttpException(403, 'В доступе отказано');
             }
-
-//            $session->set('accessAllowed', true);
-//            $session['AccessParams'] = $arAccessParams;
         }
-//        if ($session['AccessParams']) {
-//            return parent::beforeAction($action);
-//        }
+
 
         if (null === $request->get('DOMAIN') or null === $request->post('member_id') or null === $request->post('AUTH_ID') or null === $request->post('REFRESH_ID')) {
             throw new HttpException(404, 'Приложение необходимо запустить из портала Битрикс24');
@@ -51,15 +43,29 @@ class AppController extends Controller {
     }
 
     public function actionIndex() {
-        Yii::warning('actionIndex');
+        Yii::warning('actionIndex', 'action');
         $request = Yii::$app->request;
         $placementOptions = json_decode($request->post('PLACEMENT_OPTIONS'));
-        if (isset($placementOptions->routing)) {
-             Yii::warning('$placementOptions->routing');
-            $this->routing(ArrayHelper::toArray($placementOptions->routing));
-        }
+        $placement = $request->post('PLACEMENT');
+        $userBxId = \app\models\User::find()->where(['id'=> Yii::$app->user->getId()])->select(['b24_user_id'])->asArray()->one()['b24_user_id'];
         
-        return $this->render('index');
+        $params = [
+            'placement' => $placement,
+            'placementOptions' => $placementOptions,            
+        ];
+
+        return $this->render('index', ['params' => $params, 'accessToken' => $this->accessToken]);
+        
+        
+//        Yii::warning('actionIndex');
+//        $request = Yii::$app->request;
+//        $placementOptions = json_decode($request->post('PLACEMENT_OPTIONS'));
+//        if (isset($placementOptions->routing)) {
+//             Yii::warning('$placementOptions->routing');
+//            $this->routing(ArrayHelper::toArray($placementOptions->routing));
+//        }
+//        
+//        return $this->render('index');
     }
     
     protected function routing($param) {

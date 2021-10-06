@@ -1,18 +1,16 @@
-<?php
-
-use yii\helpers\Html;
-//use yii\grid\GridView;
-use yii\bootstrap\Tabs;
-
-/* @var $this yii\web\View */
-/* @var $searchModel app\modules\b24\models\B24portalSearch */
-/* @var $dataProvider yii\data\ActiveDataProvider */
-
-
-$this->title = 'Формы';
+<?php 
+use app\assets\AppAsset;
+$assetsUrl = AppAsset::register($this);
+$this->registerCssFile($assetsUrl->baseUrl . '/static/css/main.chunk.css');
+$this->registerJsFile($assetsUrl->baseUrl . '/static/js/2.chunk.js');
+$this->registerJsFile($assetsUrl->baseUrl . '/static/js/main.chunk.js');
 ?>
-<div class="py-5 text-center">
-    <p class="lead">Вы находитесь на главной странице приложения, разработанного компанией <a target="_blank" href="https://webmens.ru">Webmens.ru</a>.
-        Все настройки осуществляются через пункты меню в верхней части приложения.
-        В случае возникновения трудностей или обнаружения ошибок в работе приложения, просьба сообщить нам на email: dev.webmens.ru</p>
-</div>
+
+<div id="root"></div>
+<script>
+  let params = <?=json_encode($params)?>;
+  let accessToken = '<?=$accessToken?>';  
+</script>
+<script src="//api.bitrix24.com/api/v1/"></script>
+<script>      
+</script>
