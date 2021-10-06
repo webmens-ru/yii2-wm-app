@@ -105,11 +105,19 @@ CREATE TABLE `migration` (
 --
 -- Структура таблицы `users`
 --
+-- Создание: Сен 08 2021 г., 12:08
+-- Последнее обновление: Окт 06 2021 г., 11:05
+--
 
 CREATE TABLE `users` (
   `id` int(10) UNSIGNED NOT NULL,
   `username` varchar(255) NOT NULL,
   `password` varchar(255) NOT NULL,
+  `b24_user_id` int(11) DEFAULT NULL,
+  `name` varchar(255) DEFAULT NULL,
+  `last_name` varchar(255) DEFAULT NULL,
+  `access_token` varchar(255) DEFAULT NULL,
+  `date_expired` timestamp NULL DEFAULT NULL,
   `auth_key` varchar(255) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
