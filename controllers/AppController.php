@@ -6,6 +6,9 @@ use Yii;
 use \yii\web\HttpException;
 use yii\helpers\ArrayHelper;
 use yii\web\Controller;
+use Bitrix24\User\User as B24User;
+use yii\helpers\Url;
+use app\models\User;
 
 class AppController extends Controller {
     
@@ -14,6 +17,7 @@ class AppController extends Controller {
     public function beforeAction($action) {
         $this->enableCsrfValidation = false;
         $request = Yii::$app->request;
+        $session = Yii::$app->session;
 
         if ($request->get('DOMAIN') && $request->post('member_id') && $request->post('AUTH_ID') && $request->post('REFRESH_ID')) {
             $component24 = new \wm\b24tools\b24Tools();
@@ -22,6 +26,49 @@ class AppController extends Controller {
             if ($errors) {
                 throw new HttpException(403, 'В доступе отказано');
             }
+            
+            $b24App = $component24->connectFromUser($arAccessParams);
+            $obB24 = new B24User($b24App);
+            $b24User = $obB24->current()['result'];
+            Yii::warning($b24User, '$b24User');
+            $user = User::findByBitrixId(ArrayHelper::getValue($b24User, 'ID'));
+            Yii::warning($user, '$user');
+            if (!$user) { 
+                Yii::warning('$user1', '$user1'); 
+                $userPassword = User::generatePassword();
+                $user = new User();
+                $user->username = ArrayHelper::getValue($b24User, 'EMAIL');
+                $user->b24_user_id = ArrayHelper::getValue($b24User, 'ID');
+
+                $user->name = ArrayHelper::getValue($b24User, 'NAME');
+                $user->last_name = ArrayHelper::getValue($b24User, 'LAST_NAME');
+
+                $user->password = \Yii::$app->security->generatePasswordHash($userPassword);
+                $user->getAccessToken();
+                $user->save();
+                Yii::warning($user->errors, '$user->errors1');           
+            }else{
+                Yii::warning('$user2', '$user2');
+                $user->getAccessToken();
+                //$user->generateAccessTokenTest();
+                $user->save();
+                Yii::warning($user->errors, '$user->errors');
+            }
+            Yii::warning($user->access_token, '$user->access_token');
+            $this->accessToken = $user->access_token;
+            
+            Yii::$app->user->login($user, 3600*24*30);
+            
+//                B24ConnectSettings::getParametrByName('applicationId'), 
+//                B24ConnectSettings::getParametrByName('applicationSecret'), 
+//                B24ConnectSettings::getParametrByName('b24PortalTable'), 
+//                B24ConnectSettings::getParametrByName('b24PortalName'));
+            
+            
+            $session->set('accessAllowed', true);
+            $session['AccessParams'] = $arAccessParams;
+            
+            
         }
 
 
