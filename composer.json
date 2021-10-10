@@ -13,7 +13,7 @@
         "yiisoft/yii2-swiftmailer": "~2.0.0 || ~2.1.0",
         "webmens-ru/bitrix24-php-sdk": "@dev",
         "monolog/monolog": "^1.25",
-        "webmrns-ru/yii-extended": "dev-master",
+        "webmens-ru/yii-extended": "dev-master",
         "webmens-ru/yii2-admin": "dev-master",
         "webmens-ru/b24-tools": "dev-master"        
     },
