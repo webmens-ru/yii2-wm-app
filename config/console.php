@@ -12,6 +12,7 @@ $config = [
         '@bower' => '@vendor/bower-asset',
         '@npm'   => '@vendor/npm-asset',
         '@tests' => '@app/tests',
+        '@wm-admin' => '@vendor/webmens-ru/yii2-admin/src',
     ],
     'components' => [
         'cache' => [
@@ -28,15 +29,27 @@ $config = [
             ],
         ],
         'db' => $db,
+        'authManager' => [
+            'class' => 'yii\rbac\DbManager',
+        ],
     ],
     'params' => $params,
-    /*
     'controllerMap' => [
         'fixture' => [ // Fixture generation command line.
             'class' => 'yii\faker\FixtureController',
         ],
-    ],
-    */
+		'migrate' => [
+			'class' => 'yii\console\controllers\MigrateController',
+			/*'migrationNamespaces' => [
+                 'app\migrations',
+                 //'some\extension\migrations',
+            ],*/
+			'migrationPath' => [
+				//'@console/migrations',
+				'@yii/rbac/migrations/',
+			],
+		],
+    ],   
 ];
 
 if (YII_ENV_DEV) {
