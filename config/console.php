@@ -45,8 +45,9 @@ $config = [
                  //'some\extension\migrations',
             ],*/
 			'migrationPath' => [
-				//'@console/migrations',
+				'@app/migrations/',
 				'@yii/rbac/migrations/',
+				'@yii/log/migrations/',
 			],
 		],
     ],   
