@@ -9,6 +9,7 @@ use yii\web\Controller;
 use Bitrix24\User\User as B24User;
 use yii\helpers\Url;
 use app\models\User;
+use wm\admin\models\B24ConnectSettings;
 
 class AppController extends Controller {
     
@@ -59,12 +60,6 @@ class AppController extends Controller {
             
             Yii::$app->user->login($user, 3600*24*30);
             
-//                B24ConnectSettings::getParametrByName('applicationId'), 
-//                B24ConnectSettings::getParametrByName('applicationSecret'), 
-//                B24ConnectSettings::getParametrByName('b24PortalTable'), 
-//                B24ConnectSettings::getParametrByName('b24PortalName'));
-            
-            
             $session->set('accessAllowed', true);
             $session['AccessParams'] = $arAccessParams;
             
@@ -90,30 +85,22 @@ class AppController extends Controller {
     }
 
     public function actionIndex() {
-        Yii::warning('actionIndex', 'action');
+        //Yii::warning('actionIndex', 'action');
+        $this->layout = '@app/views/layouts/main.php';
         $request = Yii::$app->request;
-        $placementOptions = json_decode($request->post('PLACEMENT_OPTIONS'));
+        $placementOptions = json_decode($request->post('PLACEMENT_OPTIONS'));        
         $placement = $request->post('PLACEMENT');
-        $userBxId = \app\models\User::find()->where(['id'=> Yii::$app->user->getId()])->select(['b24_user_id'])->asArray()->one()['b24_user_id'];
         
         $params = [
             'placement' => $placement,
             'placementOptions' => $placementOptions,            
         ];
+        
+        $appUrl = 'https://'.B24ConnectSettings::getParametrByName('b24PortalName').'/marketplace/app/'.B24ConnectSettings::getParametrByName('appId').'/';
 
-        return $this->render('index', ['params' => $params, 'accessToken' => $this->accessToken]);
-        
-        
-//        Yii::warning('actionIndex');
-//        $request = Yii::$app->request;
-//        $placementOptions = json_decode($request->post('PLACEMENT_OPTIONS'));
-//        if (isset($placementOptions->routing)) {
-//             Yii::warning('$placementOptions->routing');
-//            $this->routing(ArrayHelper::toArray($placementOptions->routing));
-//        }
-//        
-//        return $this->render('index');
+        return $this->render('index', ['params' => json_encode($params), 'accessToken' => $this->accessToken, 'appUrl' => $appUrl] );
     }
+  
     
     protected function routing($param) {
         $param['type'] = $this->getType(ArrayHelper::getValue($param, 'type'));
