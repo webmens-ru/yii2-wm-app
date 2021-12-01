@@ -15,6 +15,8 @@ class AppController extends Controller {
     
     protected $accessToken = null;
 
+    public $layout = '@app/views/layouts/app.php';
+
     public function beforeAction($action) {
         $this->enableCsrfValidation = false;
         $request = Yii::$app->request;
@@ -86,7 +88,6 @@ class AppController extends Controller {
 
     public function actionIndex() {
         //Yii::warning('actionIndex', 'action');
-        $this->layout = '@app/views/layouts/main.php';
         $request = Yii::$app->request;
         $placementOptions = json_decode($request->post('PLACEMENT_OPTIONS'));        
         $placement = $request->post('PLACEMENT');
