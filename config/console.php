@@ -48,6 +48,7 @@ $config = [
 				'@app/migrations/',
 				'@yii/rbac/migrations/',
 				'@yii/log/migrations/',
+                '@wm-admin/migrations/',
 			],
 		],
     ],   

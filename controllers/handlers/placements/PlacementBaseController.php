@@ -7,7 +7,7 @@ use \yii\web\HttpException;
 use yii\helpers\ArrayHelper;
 use yii\web\Controller;
 use Bitrix24\User\User as B24User;
-use app\models\User;
+use wm\admin\models\User;
 
 class PlacementBaseController extends Controller {
     

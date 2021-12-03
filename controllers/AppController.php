@@ -8,7 +8,7 @@ use yii\helpers\ArrayHelper;
 use yii\web\Controller;
 use Bitrix24\User\User as B24User;
 use yii\helpers\Url;
-use app\models\User;
+use wm\admin\models\User;
 use wm\admin\models\B24ConnectSettings;
 
 class AppController extends Controller {
