@@ -1,16 +1,15 @@
-<?php 
+<?php
 use app\assets\AppAsset;
 $assetsUrl = AppAsset::register($this);
-$this->registerCssFile($assetsUrl->baseUrl . '/static/css/main.chunk.css');
+$this->registerJsFile($assetsUrl->baseUrl . '/static/js/runtime-main.js');
 $this->registerJsFile($assetsUrl->baseUrl . '/static/js/2.chunk.js');
 $this->registerJsFile($assetsUrl->baseUrl . '/static/js/main.chunk.js');
 ?>
 
 <div id="root"></div>
 <script>
-  let params = <?=json_encode($params)?>;
-  let accessToken = '<?=$accessToken?>';  
+    window._ACCESS_TOKEN_ = '<?=$accessToken?>';
+    window._PARAMS_= <?=$params?>;
+    window._APP_URL_='<?=$appUrl?>';
 </script>
 <script src="//api.bitrix24.com/api/v1/"></script>
-<script>      
-</script>
