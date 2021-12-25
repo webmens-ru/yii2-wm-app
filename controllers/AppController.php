@@ -33,11 +33,11 @@ class AppController extends Controller {
             $b24App = $component24->connectFromUser($arAccessParams);
             $obB24 = new B24User($b24App);
             $b24User = $obB24->current()['result'];
-            Yii::warning($b24User, '$b24User');
+            //Yii::warning($b24User, '$b24User');
             $user = User::findByBitrixId(ArrayHelper::getValue($b24User, 'ID'));
             Yii::warning($user, '$user');
             if (!$user) { 
-                Yii::warning('$user1', '$user1'); 
+                //Yii::warning('$user1', '$user1');
                 $userPassword = User::generatePassword();
                 $user = new User();
                 $user->username = ArrayHelper::getValue($b24User, 'EMAIL');
@@ -48,19 +48,21 @@ class AppController extends Controller {
 
                 $user->password = \Yii::$app->security->generatePasswordHash($userPassword);
                 $user->getAccessToken();
+                $user->b24AccessParams = json_encode($arAccessParams);
                 $user->save();
                 Yii::warning($user->errors, '$user->errors1');           
             }else{
-                Yii::warning('$user2', '$user2');
+                //Yii::warning('$user2', '$user2');
                 $user->getAccessToken();
+                $user->b24AccessParams = json_encode($arAccessParams);
                 //$user->generateAccessTokenTest();
                 $user->save();
-                Yii::warning($user->errors, '$user->errors');
+                //Yii::warning($user->errors, '$user->errors');
             }
             Yii::warning($user->access_token, '$user->access_token');
             $this->accessToken = $user->access_token;
             
-            Yii::$app->user->login($user, 3600*24*30);
+            //Yii::$app->user->login($user, 3600*24*30);
             
             $session->set('accessAllowed', true);
             $session['AccessParams'] = $arAccessParams;
