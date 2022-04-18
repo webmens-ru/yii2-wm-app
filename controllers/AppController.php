@@ -82,6 +82,14 @@ class AppController extends Controller {
             $request = Yii::$app->request;
             $arAccessParams = $component24->prepareFromRequest(Yii::$app->request->post(), Yii::$app->request->get());
             $result = $component24->addAuthToDB($this->portalTableName, $arAccessParams);
+            Yii::$app->db
+                ->createCommand()
+                ->update('admin_menu_item', [
+                    'params' => '{"url":"'. Yii::$app->request->hostInfo . '/admin' .'"}'
+                ],
+                    'id = 2'
+                )
+                ->execute();
             if ($result == 1) {
                 return $this->render('install');
             }
