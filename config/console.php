@@ -6,7 +6,7 @@ $db = require __DIR__ . '/db.php';
 $config = [
     'id' => 'basic-console',
     'basePath' => dirname(__DIR__),
-    'bootstrap' => ['log'],
+    'bootstrap' => ['log', 'queue'],
     'controllerNamespace' => 'app\commands',
     'aliases' => [
         '@bower' => '@vendor/bower-asset',
@@ -32,6 +32,13 @@ $config = [
         'authManager' => [
             'class' => 'yii\rbac\DbManager',
         ],
+        'queue' => [
+            'class' => \yii\queue\db\Queue::class,
+            'db' => 'db',
+            'tableName' => '{{%queue}}',
+            'channel' => 'default',
+            'mutex' => \yii\mutex\MysqlMutex::class,
+        ],
     ],
     'params' => $params,
     'controllerMap' => [
@@ -40,10 +47,9 @@ $config = [
         ],
 		'migrate' => [
 			'class' => 'yii\console\controllers\MigrateController',
-			/*'migrationNamespaces' => [
-                 'app\migrations',
-                 //'some\extension\migrations',
-            ],*/
+            'migrationNamespaces' => [
+                'yii\queue\db\migrations',
+            ],
 			'migrationPath' => [
 				'@app/migrations/',
 				'@yii/rbac/migrations/',
