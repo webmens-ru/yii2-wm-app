@@ -3,9 +3,10 @@ use app\assets\AppAsset;
 use yii\helpers\Url;
 
 $assetsUrl = AppAsset::register($this);
-$this->registerJsFile($assetsUrl->baseUrl . '/static/js/runtime-main.js');
-$this->registerJsFile($assetsUrl->baseUrl . '/static/js/2.chunk.js');
-$this->registerJsFile($assetsUrl->baseUrl . '/static/js/main.chunk.js');
+//$this->registerJsFile($assetsUrl->baseUrl . '/static/js/runtime-main.js');
+//$this->registerJsFile($assetsUrl->baseUrl . '/static/js/2.chunk.js');
+//$this->registerJsFile($assetsUrl->baseUrl . '/static/js/main.chunk.js');
+$this->registerJsFile($assetsUrl->baseUrl . '/static/js/main.js');
 ?>
 
 <div id="root"></div>
