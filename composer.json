@@ -1,6 +1,6 @@
 {
     "name": "webmens-ru/yii2-wm-app",
-    "description": "Ð¨Ð°Ð±Ð»Ð¾Ð½ Yii2 Ð¾Ñ‚ ÐºÐ¾Ð¼Ð¿Ð°Ð½Ð¸Ð¸ WebMens",
+    "description": "Øàáëîí Yii2 îò êîìïàíèè WebMens",
     "keywords": ["yii2", "framework", "basic", "project template"],
     "homepage": "http://webmens.ru",
     "type": "project",
@@ -14,10 +14,10 @@
     },
     "minimum-stability": "dev",
     "require": {
-        "php": ">=7.3.0",
-        "yiisoft/yii2": "~2.0.14",
-        "yiisoft/yii2-bootstrap4": "~2.0.0",
-        "yiisoft/yii2-swiftmailer": "~2.0.0 || ~2.1.0",
+        "php": ">=7.4.0",
+        "yiisoft/yii2": "~2.0.45",
+        "yiisoft/yii2-bootstrap5": "~2.0.2",
+        "yiisoft/yii2-symfonymailer": "~2.0.3",
         "yiisoft/yii2-jui": "^2.0",
         "webmens-ru/bitrix24-php-sdk": "@dev",
         "monolog/monolog": "^1.25",
@@ -30,15 +30,19 @@
         "yiisoft/yii2-debug": "~2.1.0",
         "yiisoft/yii2-gii": "~2.2.0",
         "yiisoft/yii2-faker": "~2.0.0",
-        "codeception/codeception": "^4.0",
-        "codeception/verify": "~0.5.0 || ~1.1.0",
-        "codeception/specify": "~0.4.6",
-        "symfony/browser-kit": ">=2.7 <=4.2.4",
-        "codeception/module-filesystem": "^1.0.0",
-        "codeception/module-yii2": "^1.0.0",
-        "codeception/module-asserts": "^1.0.0"
+        "phpunit/phpunit": "~9.5.0",
+        "codeception/codeception": "^5.0.0 || ^4.0",
+        "codeception/lib-innerbrowser": "^3.0 || ^1.1",
+        "codeception/module-asserts": "^3.0 || ^1.1",
+        "codeception/module-yii2": "^1.1",
+        "codeception/module-filesystem": "^3.0 || ^1.1",
+        "codeception/verify": "^2.2",
+        "symfony/browser-kit": "^6.0 || >=2.7 <=4.2.4"
     },
     "config": {
+        "allow-plugins": {
+            "yiisoft/yii2-composer" : true
+        },
         "process-timeout": 1800,
         "fxp-asset": {
             "enabled": false
