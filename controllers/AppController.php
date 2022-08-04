@@ -101,6 +101,7 @@ class AppController extends Controller {
         $request = Yii::$app->request;
         $placementOptions = json_decode($request->post('PLACEMENT_OPTIONS'));        
         $placement = $request->post('PLACEMENT');
+        $this->routing($placementOptions);
         
         $params = [
             'placement' => $placement,
@@ -111,28 +112,19 @@ class AppController extends Controller {
 
         return $this->render('index', ['params' => json_encode($params), 'accessToken' => $this->accessToken, 'appUrl' => $appUrl] );
     }
-  
-    
+
+
     protected function routing($param) {
-        $param['type'] = $this->getType(ArrayHelper::getValue($param, 'type'));
-        $param['url'] = $this->getUrl(ArrayHelper::getValue($param, 'url'));
-        $param['params'] = $this->getUrl(ArrayHelper::getValue($param, 'params'));
-        if(!$param['url']){
+        $tempParam = [];
+        $tempParam['route'] = $this->getType(ArrayHelper::getValue($param, 'route'));
+        $tempParam['url'] = $this->getUrl(ArrayHelper::getValue($param, 'url'));
+        if(!$tempParam['url']){
             return false;
         }
-        
-        if($param['type'] == 'app'){
-            Yii::warning('app');
-            if(is_array($param['params'])){
-                return $this->redirect(array_merge([$param['url']], $param['params']));
-            }else{
-                return $this->redirect([$param['url']]);
-            }
-            Yii::warning(array_merge([$param['url']], $param['params']));                
-        }else {
-            header('Location: ' . $param['url'] . '?IFRAME=Y&IFRAME_TYPE=SIDE_SLIDER');
-            die;
 
+        if($tempParam['route'] == 'portal'){
+            header('Location: ' . $tempParam['url'] . '?IFRAME=Y&IFRAME_TYPE=SIDE_SLIDER');
+            die;
         }
     }
     
