@@ -33,7 +33,6 @@ class AppController extends Controller {
             $b24App = $component24->connectFromUser($arAccessParams);
             $obB24 = new B24User($b24App);
             $b24User = $obB24->current()['result'];
-            //Yii::warning($b24User, '$b24User');
             $user = User::findByBitrixId(ArrayHelper::getValue($b24User, 'ID'));
             Yii::warning($user, '$user');
             if (!$user) { 
@@ -61,9 +60,6 @@ class AppController extends Controller {
             }
             Yii::warning($user->access_token, '$user->access_token');
             $this->accessToken = $user->access_token;
-            
-            //Yii::$app->user->login($user, 3600*24*30);
-            
             $session->set('accessAllowed', true);
             $session['AccessParams'] = $arAccessParams;
             
@@ -123,7 +119,11 @@ class AppController extends Controller {
         }
 
         if($tempParam['route'] == 'portal'){
-            header('Location: ' . $tempParam['url'] . '?IFRAME=Y&IFRAME_TYPE=SIDE_SLIDER');
+            if(stripos($tempParam['url'], '?') !== false){
+                header('Location: ' . $tempParam['url']). '&IFRAME=Y&IFRAME_TYPE=SIDE_SLIDER';
+            }else{
+                header('Location: ' . $tempParam['url'] . '?IFRAME=Y&IFRAME_TYPE=SIDE_SLIDER');
+            }
             die;
         }
     }
