@@ -113,7 +113,7 @@ class AppController extends Controller {
     protected function routing($param) {
         $tempParam = [];
         $tempParam['route'] = $this->getType(ArrayHelper::getValue($param, 'route'));
-        $tempParam['url'] = $this->getUrl(ArrayHelper::getValue($param, 'url'));
+        $tempParam['url'] = $this->getUrl(ArrayHelper::getValue($param, 'handler'));
         if(!$tempParam['url']){
             return false;
         }
