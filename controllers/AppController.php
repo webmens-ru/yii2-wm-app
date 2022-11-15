@@ -2,22 +2,24 @@
 
 namespace app\controllers;
 
-use Yii;
-use \yii\web\HttpException;
-use yii\helpers\ArrayHelper;
-use yii\web\Controller;
 use Bitrix24\User\User as B24User;
-use yii\helpers\Url;
-use wm\admin\models\User;
 use wm\admin\models\B24ConnectSettings;
+use wm\admin\models\User;
+use Yii;
+use yii\helpers\ArrayHelper;
+use yii\helpers\Url;
+use yii\web\Controller;
+use yii\web\HttpException;
 
-class AppController extends Controller {
-    
+class AppController extends Controller
+{
+
     protected $accessToken = null;
 
     public $layout = '@app/views/layouts/app.php';
 
-    public function beforeAction($action) {
+    public function beforeAction($action)
+    {
         $this->enableCsrfValidation = false;
         $request = Yii::$app->request;
         $session = Yii::$app->session;
@@ -29,13 +31,13 @@ class AppController extends Controller {
             if ($errors) {
                 throw new HttpException(403, 'В доступе отказано');
             }
-            
+
             $b24App = $component24->connectFromUser($arAccessParams);
             $obB24 = new B24User($b24App);
             $b24User = $obB24->current()['result'];
             $user = User::findByBitrixId(ArrayHelper::getValue($b24User, 'ID'));
             Yii::warning($user, '$user');
-            if (!$user) { 
+            if (!$user) {
                 //Yii::warning('$user1', '$user1');
                 $userPassword = User::generatePassword();
                 $user = new User();
@@ -49,8 +51,8 @@ class AppController extends Controller {
                 $user->getAccessToken();
                 $user->b24AccessParams = json_encode($arAccessParams);
                 $user->save();
-                Yii::warning($user->errors, '$user->errors1');           
-            }else{
+                Yii::warning($user->errors, '$user->errors1');
+            } else {
                 //Yii::warning('$user2', '$user2');
                 $user->getAccessToken();
                 $user->b24AccessParams = json_encode($arAccessParams);
@@ -62,8 +64,8 @@ class AppController extends Controller {
             $this->accessToken = $user->access_token;
             $session->set('accessAllowed', true);
             $session['AccessParams'] = $arAccessParams;
-            
-            
+
+
         }
 
 
@@ -73,86 +75,91 @@ class AppController extends Controller {
         return parent::beforeAction($action);
     }
 
-    public function actionInstall() {
-            $component24 = new \wm\b24tools\b24Tools();
-            $request = Yii::$app->request;
-            $arAccessParams = $component24->prepareFromRequest(Yii::$app->request->post(), Yii::$app->request->get());
-            $result = $component24->addAuthToDB($this->portalTableName, $arAccessParams);
-            Yii::$app->db
-                ->createCommand()
-                ->update('admin_menu_item', [
-                    'params' => '{"url":"'. Yii::$app->request->hostInfo . '/admin' .'"}'
-                ],
-                    'id = 2'
-                )
-                ->execute();
-            if ($result == 1) {
-                return $this->render('install');
-            }
-            return 'Ошибка записи';
+    public function actionInstall()
+    {
+        $component24 = new \wm\b24tools\b24Tools();
+        $request = Yii::$app->request;
+        $arAccessParams = $component24->prepareFromRequest(Yii::$app->request->post(), Yii::$app->request->get());
+        $result = $component24->addAuthToDB($this->portalTableName, $arAccessParams);
+        Yii::$app->db
+            ->createCommand()
+            ->update('admin_menu_item', [
+                'params' => '{"url":"' . Yii::$app->request->hostInfo . '/admin' . '"}'
+            ],
+                'id = 2'
+            )
+            ->execute();
+        if ($result == 1) {
+            return $this->render('install');
+        }
+        return 'Ошибка записи';
     }
 
-    public function actionIndex() {
+    public function actionIndex()
+    {
         //Yii::warning('actionIndex', 'action');
         $request = Yii::$app->request;
-        $placementOptions = json_decode($request->post('PLACEMENT_OPTIONS'));        
+        $placementOptions = json_decode($request->post('PLACEMENT_OPTIONS'));
         $placement = $request->post('PLACEMENT');
         $this->routing($placementOptions);
-        
+
         $params = [
             'placement' => $placement,
-            'placementOptions' => $placementOptions,            
+            'placementOptions' => $placementOptions,
         ];
-        
-        $appUrl = 'https://'.B24ConnectSettings::getParametrByName('b24PortalName').'/marketplace/app/'.B24ConnectSettings::getParametrByName('appId').'/';
 
-        return $this->render('index', ['params' => json_encode($params), 'accessToken' => $this->accessToken, 'appUrl' => $appUrl] );
+        $appUrl = 'https://' . B24ConnectSettings::getParametrByName('b24PortalName') . '/marketplace/app/' . B24ConnectSettings::getParametrByName('appId') . '/';
+
+        return $this->render('index', ['params' => json_encode($params), 'accessToken' => $this->accessToken, 'appUrl' => $appUrl]);
     }
 
 
-    protected function routing($param) {
+    protected function routing($param)
+    {
         $tempParam = [];
         $tempParam['route'] = $this->getType(ArrayHelper::getValue($param, 'route'));
-        $tempParam['url'] = $this->getUrl(ArrayHelper::getValue($param, 'handler'));
-        if(!$tempParam['url']){
+        $tempParam['handler'] = (ArrayHelper::getValue($param, 'handler')) ?
+            $this->getUrl(ArrayHelper::getValue($param, 'handler')) :
+            $this->getUrl(ArrayHelper::getValue($param, 'url'));
+        if (!$tempParam['handler']) {
             return false;
         }
 
-        if($tempParam['route'] == 'portal'){
-            if(stripos($tempParam['url'], '?') !== false){
-                header('Location: ' . $tempParam['url']). '&IFRAME=Y&IFRAME_TYPE=SIDE_SLIDER';
-            }else{
-                header('Location: ' . $tempParam['url'] . '?IFRAME=Y&IFRAME_TYPE=SIDE_SLIDER');
-            }
+        if ($tempParam['route'] == 'portal') {
+            $simbol = (strpos($tempParam['handler'], '?') === false) ? '?' : '&';
+            header('Location: ' . $tempParam['handler'] . $simbol . 'IFRAME=Y&IFRAME_TYPE=SIDE_SLIDER');
             die;
         }
     }
-    
-    protected function getType($param){
-        
+
+    protected function getType($param)
+    {
+
         $baseTypies = ['app', 'portal'];
-        if(!$param){
+        if (!$param) {
             return 'app';
         }
-        
-        if(in_array($param, $baseTypies)){
+
+        if (in_array($param, $baseTypies)) {
             return $param;
-        }else{
+        } else {
             return 'app';
-        }        
+        }
     }
-    
-    protected function getUrl($param){ 
-        if($param){
+
+    protected function getUrl($param)
+    {
+        if ($param) {
             return $param;
-        }else{
+        } else {
             return false;
         }
     }
-    
-    public function getPortalTableName(){
+
+    public function getPortalTableName()
+    {
         return 'admin_b24portal';
     }
-    
+
 
 }
