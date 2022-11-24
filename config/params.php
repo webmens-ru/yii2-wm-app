@@ -6,4 +6,10 @@ return [
     'senderName' => 'Example.com mailer',
     'bsDependencyEnabled' => false,
     'bsVersion' => '5.x',
+    'applicationId' => 'app.00000000000',
+    'applicationSecret' => '0000000000000000000000',
+    'b24PortalTable' => 'admin_b24portal',
+    'extendedLoggerPortal' => [
+
+    ]
 ];
