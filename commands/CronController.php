@@ -9,7 +9,6 @@ namespace app\commands;
 use Yii;
 use yii\console\Controller;
 use yii\console\ExitCode;
-use wm\admin\models\B24ConnectSettings;
 use wm\admin\models\settings\Agents;
 
 /**
@@ -28,13 +27,15 @@ class CronController extends Controller
      */
     public function actionUpdateConnect()
     {
+        $portalNames = (new \yii\db\Query())
+            ->select('PORTAL')
+            ->from(Yii::$app->params['b24PortalTable'])
+            ->all();
         $component = new \wm\b24tools\b24Tools();
-        $component->connect(
-            B24ConnectSettings::getParametrByName('applicationId'),
-            B24ConnectSettings::getParametrByName('applicationSecret'),
-            B24ConnectSettings::getParametrByName('b24PortalTable'),
-            B24ConnectSettings::getParametrByName('b24PortalName')
-        );
+        foreach ($portalNames as $portalName){
+            $component->connectFromAdmin($portalName);
+        }
+
         return ExitCode::OK;
     }
 

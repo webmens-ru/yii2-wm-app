@@ -3,7 +3,6 @@
 namespace app\controllers;
 
 use Bitrix24\User\User as B24User;
-use wm\admin\models\B24ConnectSettings;
 use wm\admin\models\User;
 use Yii;
 use yii\helpers\ArrayHelper;
@@ -107,8 +106,10 @@ class AppController extends Controller
             'placement' => $placement,
             'placementOptions' => $placementOptions,
         ];
+        $userId = Yii::$app->user->id;
+        $portalName = User::getPortalName($userId);
 
-        $appUrl = 'https://' . B24ConnectSettings::getParametrByName('b24PortalName') . '/marketplace/app/' . B24ConnectSettings::getParametrByName('appId') . '/';
+        $appUrl = 'https://' . $portalName . '/marketplace/app/' . 1 . '/'; //TODO B24ConnectSettings::getParametrByName('appId')
 
         return $this->render('index', ['params' => json_encode($params), 'accessToken' => $this->accessToken, 'appUrl' => $appUrl]);
     }
