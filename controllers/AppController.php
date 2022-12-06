@@ -2,6 +2,7 @@
 
 namespace app\controllers;
 
+use app\models\App;
 use Bitrix24\User\User as B24User;
 use wm\admin\models\User;
 use Yii;
@@ -88,6 +89,7 @@ class AppController extends Controller
                 'id = 2'
             )
             ->execute();
+        App::install();
         if ($result == 1) {
             return $this->render('install');
         }
