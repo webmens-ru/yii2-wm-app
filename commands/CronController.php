@@ -27,6 +27,7 @@ class CronController extends Controller
      */
     public function actionUpdateConnect()
     {
+        \Yii::$app->params['logPath'] = 'log/';
         $portalNames = (new \yii\db\Query())
             ->select('PORTAL')
             ->from(Yii::$app->params['b24PortalTable'])
@@ -41,7 +42,7 @@ class CronController extends Controller
 
     public function actionAgentsRun()
     {
-        Yii::warning('actionAgentsRun');
+        \Yii::$app->params['logPath'] = 'log/';
         Agents::shedulRun();
         return ExitCode::OK;
     }
