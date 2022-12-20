@@ -2,9 +2,7 @@
 
 namespace app\controllers\handlers\events;
 
-use app\modules\v1\models\B24Portal;
-use app\modules\v1\models\ChatbotPortal;
-use app\modules\v1\models\SendSettings;
+use app\models\B24Portal;
 use Yii;
 
 class AppController extends \yii\web\Controller
@@ -36,8 +34,6 @@ class AppController extends \yii\web\Controller
         $applicationToken = $auth['application_token'];
 
         if ($model->applicationToken == $applicationToken) {
-            ChatbotPortal::deleteAll(['portalName' => $portalName]);
-            SendSettings::deleteAll(['portalName' => $portalName]);
         }
     }
 }

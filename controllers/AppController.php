@@ -11,20 +11,44 @@ use yii\helpers\Url;
 use yii\web\Controller;
 use yii\web\HttpException;
 
+/**
+ * Class AppController
+ * @package app\controllers
+ *
+ * @property string $portalTableName
+ */
 class AppController extends Controller
 {
-
+    /**
+     * @var null
+     */
     protected $accessToken = null;
 
+    /**
+     * @var string
+     */
     public $layout = '@app/views/layouts/app.php';
 
+    /**
+     * @param \yii\base\Action $action
+     * @return bool
+     * @throws HttpException
+     * @throws \yii\base\Exception
+     * @throws \yii\db\Exception
+     * @throws \yii\web\BadRequestHttpException
+     */
     public function beforeAction($action)
     {
         $this->enableCsrfValidation = false;
         $request = Yii::$app->request;
         $session = Yii::$app->session;
 
-        if ($request->get('DOMAIN') && $request->post('member_id') && $request->post('AUTH_ID') && $request->post('REFRESH_ID')) {
+        if (
+            $request->get('DOMAIN')
+            && $request->post('member_id')
+            && $request->post('AUTH_ID')
+            && $request->post('REFRESH_ID')
+        ) {
             $component24 = new \wm\b24tools\b24Tools();
             $arAccessParams = $component24->prepareFromRequest(Yii::$app->request->post(), Yii::$app->request->get());
             $errors = $component24->checkB24Auth();
@@ -36,7 +60,6 @@ class AppController extends Controller
             $obB24 = new B24User($b24App);
             $b24User = $obB24->current()['result'];
             $user = User::findByBitrixId(ArrayHelper::getValue($b24User, 'ID'));
-            Yii::warning($user, '$user');
             if (!$user) {
                 //Yii::warning('$user1', '$user1');
                 $userPassword = User::generatePassword();
@@ -60,21 +83,27 @@ class AppController extends Controller
                 $user->save();
                 //Yii::warning($user->errors, '$user->errors');
             }
-            Yii::warning($user->access_token, '$user->access_token');
             $this->accessToken = $user->access_token;
             $session->set('accessAllowed', true);
             $session['AccessParams'] = $arAccessParams;
-
-
         }
 
 
-        if (null === $request->get('DOMAIN') or null === $request->post('member_id') or null === $request->post('AUTH_ID') or null === $request->post('REFRESH_ID')) {
+        if (
+            null === $request->get('DOMAIN')
+            or null === $request->post('member_id')
+            or null === $request->post('AUTH_ID')
+            or null === $request->post('REFRESH_ID')
+        ) {
             throw new HttpException(404, 'Приложение необходимо запустить из портала Битрикс24');
         }
         return parent::beforeAction($action);
     }
 
+    /**
+     * @return string
+     * @throws \yii\db\Exception
+     */
     public function actionInstall()
     {
         $component24 = new \wm\b24tools\b24Tools();
@@ -83,9 +112,11 @@ class AppController extends Controller
         $result = $component24->addAuthToDB($this->portalTableName, $arAccessParams);
         Yii::$app->db
             ->createCommand()
-            ->update('admin_menu_item', [
-                'params' => '{"url":"' . Yii::$app->request->hostInfo . '/admin' . '"}'
-            ],
+            ->update(
+                'admin_menu_item',
+                [
+                    'params' => '{"url":"' . Yii::$app->request->hostInfo . '/admin' . '"}'
+                ],
                 'id = 2'
             )
             ->execute();
@@ -96,6 +127,9 @@ class AppController extends Controller
         return 'Ошибка записи';
     }
 
+    /**
+     * @return string
+     */
     public function actionIndex()
     {
         //Yii::warning('actionIndex', 'action');
@@ -111,12 +145,21 @@ class AppController extends Controller
         $userId = Yii::$app->user->id;
         $portalName = User::getPortalName($userId);
 
-        $appUrl = 'https://' . $portalName . '/marketplace/app/' . 1 . '/'; //TODO B24ConnectSettings::getParametrByName('appId')
+        $appUrl = 'https://' . $portalName . '/marketplace/app/' . 1 . '/';
+        //TODO B24ConnectSettings::getParametrByName('appId')
 
-        return $this->render('index', ['params' => json_encode($params), 'accessToken' => $this->accessToken, 'appUrl' => $appUrl]);
+        return $this->render(
+            'index',
+            ['params' => json_encode($params), 'accessToken' => $this->accessToken, 'appUrl' => $appUrl]
+        );
     }
 
 
+    /**
+     * @param mixed $param
+     * @return bool|void
+     * @throws \Exception
+     */
     protected function routing($param)
     {
         $tempParam = [];
@@ -135,6 +178,10 @@ class AppController extends Controller
         }
     }
 
+    /**
+     * @param string $param
+     * @return string
+     */
     protected function getType($param)
     {
 
@@ -150,6 +197,10 @@ class AppController extends Controller
         }
     }
 
+    /**
+     * @param string $param
+     * @return bool|string
+     */
     protected function getUrl($param)
     {
         if ($param) {
@@ -159,10 +210,11 @@ class AppController extends Controller
         }
     }
 
+    /**
+     * @return string
+     */
     public function getPortalTableName()
     {
         return 'admin_b24portal';
     }
-
-
 }

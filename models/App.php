@@ -1,8 +1,6 @@
 <?php
 
-
 namespace app\models;
-
 
 use Bitrix24\B24Object;
 use Bitrix24\Im\Im;
@@ -10,7 +8,6 @@ use wm\admin\models\User;
 use wm\b24tools\b24Tools;
 use yii\helpers\Url;
 use Bitrix24\User\User as B24User;
-
 
 class App extends \yii\base\Model
 {

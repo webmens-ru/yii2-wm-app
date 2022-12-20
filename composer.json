@@ -37,7 +37,10 @@
         "codeception/module-yii2": "^1.1",
         "codeception/module-filesystem": "^3.0 || ^1.1",
         "codeception/verify": "^2.2",
-        "symfony/browser-kit": "^6.0 || >=2.7 <=4.2.4"
+        "symfony/browser-kit": "^6.0 || >=2.7 <=4.2.4",
+        "phpstan/phpstan": "1.9.x-dev",
+        "proget-hq/phpstan-yii2": "dev-master",
+        "squizlabs/php_codesniffer": "*"
     },
     "config": {
         "allow-plugins": {
@@ -78,5 +81,10 @@
             "type": "composer",
             "url": "https://asset-packagist.org"
         }
-    ]
+    ],
+    "autoload": {
+        "psr-4": {
+            "app\\": "./"
+        }
+    }
 }
