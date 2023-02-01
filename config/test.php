@@ -41,6 +41,10 @@ return [
             ],
             */
         ],
+        'queue' => [
+            'class' => \yii\queue\file\Queue::class,
+            'path' => '@runtime/queue',
+        ],
     ],
     'params' => $params,
 ];
