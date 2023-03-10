@@ -1,6 +1,7 @@
 <?php
 
 $params = require __DIR__ . '/params.php';
+$params['logPath'] = 'log/';
 $db = require __DIR__ . '/db.php';
 
 $config = [
