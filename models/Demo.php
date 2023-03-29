@@ -2,10 +2,8 @@
 
 namespace app\models;
 
-use Yii;
-
 /**
- * This is the model class for table "test".
+ * This is the model class for table "demo".
  *
  * @property int $id
  * @property string $title
@@ -19,7 +17,7 @@ class Demo extends \wm\yii\db\ActiveRecord
      */
     public static function tableName()
     {
-        return 'test';
+        return 'demo';
     }
 
     /**
@@ -33,17 +31,5 @@ class Demo extends \wm\yii\db\ActiveRecord
             [['title'], 'string', 'max' => 255],
         ];
     }
-
-    /**
-     * {@inheritdoc}
-     */
-    public function attributeLabels()
-    {
-        return [
-            'id' => 'ID',
-            'title' => 'Title',
-            'value' => 'Value',
-            'userId' => 'User ID',
-        ];
-    }
 }
+

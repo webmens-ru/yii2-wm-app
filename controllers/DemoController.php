@@ -2,9 +2,9 @@
 
 namespace app\controllers;
 
-use wm\admin\controllers\ActiveRestController;
 use app\models\Demo;
 use app\models\DemoSearch;
+use wm\yii\rest\ActiveRestController;
 
 class DemoController extends ActiveRestController
 {

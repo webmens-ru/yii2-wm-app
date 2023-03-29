@@ -132,7 +132,6 @@ class AppController extends Controller
      */
     public function actionIndex()
     {
-        //Yii::warning('actionIndex', 'action');
         $request = Yii::$app->request;
         $placementOptions = json_decode($request->post('PLACEMENT_OPTIONS'));
         $placement = $request->post('PLACEMENT');
