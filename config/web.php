@@ -95,6 +95,20 @@ if (YII_ENV_DEV) {
         'class' => 'yii\gii\Module',
         // uncomment the following to add your IP if you are not connecting from localhost.
         'allowedIPs' => ['127.0.0.1', '::1'],
+        'generators' => [
+            'reactmodel' => [
+                'class' => 'wm\admin\models\gii\model\Generator',
+                'templates' => [
+                    'reactModel' => '@app/vendor/webmens-ru/yii2-admin/src/models/gii/model/react',
+                ]
+            ],
+            'reactcrud' => [
+                'class' => 'wm\admin\models\gii\crud\Generator',
+                'templates' => [
+                    'reactCrud' => '@app/vendor/webmens-ru/yii2-admin/src/models/gii/crud/react',
+                ]
+            ]
+        ],
     ];
 }
 
