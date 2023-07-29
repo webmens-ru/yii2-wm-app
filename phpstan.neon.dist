@@ -8,6 +8,6 @@ parameters:
     bootstrapFiles:
         - vendor/yiisoft/yii2/Yii.php
     yii2:
-            config_path: config/test.php
+            config_path: config/web.php
     ignoreErrors:
             - '#Access to an undefined property wm\\admin\\models\\synchronization[a-zA-Z0-9\\_::$.]+#'
