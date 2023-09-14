@@ -1,22 +1,27 @@
 <?php
+namespace app\controllers\handlers\robots;
 
-namespace app\modules\baseapp\controllers\handlers\robots;
+use Bitrix24\B24Object;
+use yii\helpers\ArrayHelper;
 
-use yii\base\Action;
-use Yii;
-use wm\b24tools\b24Tools;
-
-class DemoAction extends Action
+class DemoAction extends BaseRobotAction
 {
-    public function run()
+    protected function logicRobot($properties, $b24App)
     {
-        $request = Yii::$app->request;
-        $auth = $request->post('auth');
-        $properties = $request->post('properties');
-        $component = new b24Tools();
-        $b24App = $component->connectFromUser($auth);
-        $obB24 = new \Bitrix24\App\App($b24App);
-        $b24 = $obB24->info();
-        return $b24;
+        $myProperty = ArrayHelper::getValue($properties, 'myProperty');
+
+        $obB24 = new B24Object($b24App);
+        $request = $obB24->client->call('method', ['ID' => $myProperty]
+        );
+
+        $ids = ArrayHelper::getValue($request, 'result');
+
+        return [
+            'ids' => $ids,
+            'maxId' => $ids ? max($ids) : null,
+            'minId' => $ids ? min($ids) : null,
+            'count' => count($ids)
+        ];
     }
 }
+
