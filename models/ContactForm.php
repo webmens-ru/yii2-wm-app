@@ -10,15 +10,30 @@ use yii\base\Model;
  */
 class ContactForm extends Model
 {
+    /**
+     * @var string
+     */
     public $name;
+    /**
+     * @var string
+     */
     public $email;
+    /**
+     * @var string
+     */
     public $subject;
+    /**
+     * @var string
+     */
     public $body;
+    /**
+     * @var string
+     */
     public $verifyCode;
 
 
     /**
-     * @return array the validation rules.
+     * @return mixed[] the validation rules.
      */
     public function rules()
     {
@@ -33,7 +48,7 @@ class ContactForm extends Model
     }
 
     /**
-     * @return array customized attribute labels
+     * @return mixed[] customized attribute labels
      */
     public function attributeLabels()
     {
