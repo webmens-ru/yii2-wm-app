@@ -12,8 +12,9 @@ use app\models\ContactForm;
 
 class SiteController extends Controller
 {
+
     /**
-     * {@inheritdoc}
+     * @return mixed[]
      */
     public function behaviors()
     {
@@ -38,8 +39,9 @@ class SiteController extends Controller
         ];
     }
 
+
     /**
-     * {@inheritdoc}
+     * @return mixed[]
      */
     public function actions()
     {
