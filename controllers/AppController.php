@@ -57,6 +57,9 @@ class AppController extends Controller
             }
 
             $b24App = $component24->connectFromUser($arAccessParams);
+            if(!$b24App){
+                throw new HttpException(403, 'В доступе отказано');
+            }
             $obB24 = new B24User($b24App);
             $b24User = $obB24->current()['result'];
             $user = User::findByBitrixId(ArrayHelper::getValue($b24User, 'ID'));
@@ -64,21 +67,21 @@ class AppController extends Controller
                 //Yii::warning('$user1', '$user1');
                 $userPassword = User::generatePassword();
                 $user = new User();
-                $user->username = ArrayHelper::getValue($b24User, 'EMAIL');
-                $user->b24_user_id = ArrayHelper::getValue($b24User, 'ID');
+                $user->username = strval(ArrayHelper::getValue($b24User, 'EMAIL'));
+                $user->b24_user_id = intval(ArrayHelper::getValue($b24User, 'ID'));
 
                 $user->name = ArrayHelper::getValue($b24User, 'NAME');
                 $user->last_name = ArrayHelper::getValue($b24User, 'LAST_NAME');
 
                 $user->password = \Yii::$app->security->generatePasswordHash($userPassword);
                 $user->getAccessToken();
-                $user->b24AccessParams = json_encode($arAccessParams);
+                $user->b24AccessParams = json_encode($arAccessParams)?:'';
                 $user->save();
                 Yii::warning($user->errors, '$user->errors1');
             } else {
                 //Yii::warning('$user2', '$user2');
                 $user->getAccessToken();
-                $user->b24AccessParams = json_encode($arAccessParams);
+                $user->b24AccessParams = json_encode($arAccessParams)?:'';
                 //$user->generateAccessTokenTest();
                 $user->save();
                 //Yii::warning($user->errors, '$user->errors');

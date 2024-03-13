@@ -11,3 +11,4 @@ parameters:
             config_path: config/web.php
     ignoreErrors:
             - '#Access to an undefined property wm\\admin\\models\\synchronization[a-zA-Z0-9\\_::$.]+#'
+    reportUnmatchedIgnoredErrors: false
