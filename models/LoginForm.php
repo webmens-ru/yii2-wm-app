@@ -14,15 +14,27 @@ use wm\admin\models\User;
  */
 class LoginForm extends Model
 {
+    /**
+     * @var string
+     */
     public $username;
+    /**
+     * @var string
+     */
     public $password;
+    /**
+     * @var bool
+     */
     public $rememberMe = true;
 
-    private $user = false;
+    /**
+     * @var User|null
+     */
+    private $user = null;
 
 
     /**
-     * @return array the validation rules.
+     * @return mixed[] the validation rules.
      */
     public function rules()
     {
@@ -41,7 +53,8 @@ class LoginForm extends Model
      * This method serves as the inline validation for password.
      *
      * @param string $attribute the attribute currently being validated
-     * @param array $params the additional name-value pairs given in the rule
+     * @param mixed[] $params the additional name-value pairs given in the rule
+     * @return void
      */
     public function validatePassword($attribute, $params)
     {
@@ -60,8 +73,8 @@ class LoginForm extends Model
      */
     public function login()
     {
-        if ($this->validate()) {
-            return Yii::$app->user->login($this->getUser(), $this->rememberMe ? 3600 * 24 * 30 : 0);
+        if ($this->validate()&& $user = $this->getUser()) {
+            return Yii::$app->user->login($user, $this->rememberMe ? 3600 * 24 * 30 : 0);
         }
         return false;
     }
@@ -73,7 +86,7 @@ class LoginForm extends Model
      */
     public function getUser()
     {
-        if ($this->user === false) {
+        if (!$this->user) {
             $this->user = User::findByUsername($this->username);
         }
 
