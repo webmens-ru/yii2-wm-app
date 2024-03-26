@@ -17,6 +17,7 @@ RewriteRule ^upload/(.*)$ web/upload/$1 [L]
 RewriteRule ^react/(.*)$ web/react/$1 [L]
 RewriteRule ^static/(.*)$ web/static/$1 [L]
 RewriteRule ^placements/(.*)$ web/placements/$1 [L]
+RewriteRule ^favicon\.ico$ web/favicon.ico [L]
 
 RewriteRule (.*) /web/$1
 
