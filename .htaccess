@@ -18,6 +18,7 @@ RewriteRule ^react/(.*)$ web/react/$1 [L]
 RewriteRule ^static/(.*)$ web/static/$1 [L]
 RewriteRule ^placements/(.*)$ web/placements/$1 [L]
 RewriteRule ^favicon\.ico$ web/favicon.ico [L]
+RewriteRule ^robots\.txt$ web/robots.txt [L]
 
 RewriteRule (.*) /web/$1
 
