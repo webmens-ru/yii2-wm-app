@@ -13,5 +13,6 @@ return [
     'logPath' => '../log/',
     'extendedLoggerPortal' => [
 
-    ]
+    ],
+    'siteUrl' => 'https://example.com',
 ];
