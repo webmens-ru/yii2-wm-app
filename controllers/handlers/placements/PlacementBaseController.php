@@ -13,6 +13,9 @@ use wm\admin\models\User;
 
 class PlacementBaseController extends Controller
 {
+    /**
+     * @var mixed
+     */
     protected $accessToken = null;
 
     public $layout = '@app/views/layouts/app.php';
