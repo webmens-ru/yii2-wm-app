@@ -1,0 +1,746 @@
+===== DEPLOY START: Thu Jul 10 12:59:19 MSK 2025 =====
+[CLEAN] Cleaning working directory (excluding .env and autopullFromGitHub)...
+find: '/home/d/doorhankrd/calc.doorhan-krd.ru/public_html/vendor/fortawesome/font-awesome/.github': No such file or directory
+find: '/home/d/doorhankrd/calc.doorhan-krd.ru/public_html/vendor/fortawesome/font-awesome/js-packages': No such file or directory
+find: '/home/d/doorhankrd/calc.doorhan-krd.ru/public_html/vendor/fortawesome/font-awesome/sprites': No such file or directory
+find: '/home/d/doorhankrd/calc.doorhan-krd.ru/public_html/vendor/fortawesome/font-awesome/otfs': No such file or directory
+find: '/home/d/doorhankrd/calc.doorhan-krd.ru/public_html/vendor/fortawesome/font-awesome/metadata': No such file or directory
+find: '/home/d/doorhankrd/calc.doorhan-krd.ru/public_html/vendor/fortawesome/font-awesome/scss': No such file or directory
+find: '/home/d/doorhankrd/calc.doorhan-krd.ru/public_html/vendor/fortawesome/font-awesome/webfonts': No such file or directory
+find: '/home/d/doorhankrd/calc.doorhan-krd.ru/public_html/vendor/fortawesome/font-awesome/css': No such file or directory
+find: '/home/d/doorhankrd/calc.doorhan-krd.ru/public_html/vendor/fortawesome/font-awesome/js': No such file or directory
+find: '/home/d/doorhankrd/calc.doorhan-krd.ru/public_html/vendor/fortawesome/font-awesome/less': No such file or directory
+find: '/home/d/doorhankrd/calc.doorhan-krd.ru/public_html/vendor/psy': No such file or directory
+find: '/home/d/doorhankrd/calc.doorhan-krd.ru/public_html/vendor/ralouphie': No such file or directory
+find: '/home/d/doorhankrd/calc.doorhan-krd.ru/public_html/vendor/phpoffice': No such file or directory
+find: '/home/d/doorhankrd/calc.doorhan-krd.ru/public_html/vendor/ezyang': No such file or directory
+find: '/home/d/doorhankrd/calc.doorhan-krd.ru/public_html/vendor/markbaker': No such file or directory
+find: '/home/d/doorhankrd/calc.doorhan-krd.ru/public_html/vendor/rmrevin': No such file or directory
+find: '/home/d/doorhankrd/calc.doorhan-krd.ru/public_html/vendor/masterminds': No such file or directory
+find: '/home/d/doorhankrd/calc.doorhan-krd.ru/public_html/vendor/phpunit': No such file or directory
+find: '/home/d/doorhankrd/calc.doorhan-krd.ru/public_html/vendor/myclabs': No such file or directory
+find: '/home/d/doorhankrd/calc.doorhan-krd.ru/public_html/vendor/egulias': No such file or directory
+find: '/home/d/doorhankrd/calc.doorhan-krd.ru/public_html/vendor/codeception': No such file or directory
+find: '/home/d/doorhankrd/calc.doorhan-krd.ru/public_html/vendor/sabberworm': No such file or directory
+find: '/home/d/doorhankrd/calc.doorhan-krd.ru/public_html/vendor/phpstan': No such file or directory
+find: '/home/d/doorhankrd/calc.doorhan-krd.ru/public_html/vendor/phpspec': No such file or directory
+find: '/home/d/doorhankrd/calc.doorhan-krd.ru/public_html/vendor/bin': No such file or directory
+find: '/home/d/doorhankrd/calc.doorhan-krd.ru/public_html/vendor/dompdf': No such file or directory
+find: '/home/d/doorhankrd/calc.doorhan-krd.ru/public_html/vendor/proget-hq': No such file or directory
+find: '/home/d/doorhankrd/calc.doorhan-krd.ru/public_html/vendor/yiisoft': No such file or directory
+find: '/home/d/doorhankrd/calc.doorhan-krd.ru/public_html/vendor/guzzlehttp': No such file or directory
+find: '/home/d/doorhankrd/calc.doorhan-krd.ru/public_html/vendor/doctrine': No such file or directory
+find: '/home/d/doorhankrd/calc.doorhan-krd.ru/public_html/vendor/symfony': No such file or directory
+find: '/home/d/doorhankrd/calc.doorhan-krd.ru/public_html/vendor/fakerphp': No such file or directory
+find: '/home/d/doorhankrd/calc.doorhan-krd.ru/public_html/vendor/bower-asset': No such file or directory
+find: '/home/d/doorhankrd/calc.doorhan-krd.ru/public_html/vendor/phar-io': No such file or directory
+find: '/home/d/doorhankrd/calc.doorhan-krd.ru/public_html/vendor/kartik-v': No such file or directory
+find: '/home/d/doorhankrd/calc.doorhan-krd.ru/public_html/vendor/psr': No such file or directory
+find: '/home/d/doorhankrd/calc.doorhan-krd.ru/public_html/vendor/nikic': No such file or directory
+find: '/home/d/doorhankrd/calc.doorhan-krd.ru/public_html/vendor/webmens-ru': No such file or directory
+find: '/home/d/doorhankrd/calc.doorhan-krd.ru/public_html/vendor/composer': No such file or directory
+find: '/home/d/doorhankrd/calc.doorhan-krd.ru/public_html/vendor/select2': No such file or directory
+find: '/home/d/doorhankrd/calc.doorhan-krd.ru/public_html/vendor/sebastian': No such file or directory
+find: '/home/d/doorhankrd/calc.doorhan-krd.ru/public_html/vendor/monolog': No such file or directory
+find: '/home/d/doorhankrd/calc.doorhan-krd.ru/public_html/vendor/theseer': No such file or directory
+find: '/home/d/doorhankrd/calc.doorhan-krd.ru/public_html/vendor/cebe': No such file or directory
+find: '/home/d/doorhankrd/calc.doorhan-krd.ru/public_html/vendor/squizlabs': No such file or directory
+find: '/home/d/doorhankrd/calc.doorhan-krd.ru/public_html/runtime/cache/4d': No such file or directory
+find: '/home/d/doorhankrd/calc.doorhan-krd.ru/public_html/runtime/cache/cb': No such file or directory
+find: '/home/d/doorhankrd/calc.doorhan-krd.ru/public_html/runtime/cache/7c': No such file or directory
+find: '/home/d/doorhankrd/calc.doorhan-krd.ru/public_html/runtime/cache/40': No such file or directory
+find: '/home/d/doorhankrd/calc.doorhan-krd.ru/public_html/runtime/cache/f4': No such file or directory
+find: '/home/d/doorhankrd/calc.doorhan-krd.ru/public_html/runtime/cache/cc': No such file or directory
+find: '/home/d/doorhankrd/calc.doorhan-krd.ru/public_html/runtime/cache/5f': No such file or directory
+find: '/home/d/doorhankrd/calc.doorhan-krd.ru/public_html/runtime/cache/84': No such file or directory
+find: '/home/d/doorhankrd/calc.doorhan-krd.ru/public_html/runtime/cache/06': No such file or directory
+find: '/home/d/doorhankrd/calc.doorhan-krd.ru/public_html/runtime/cache/7a': No such file or directory
+find: '/home/d/doorhankrd/calc.doorhan-krd.ru/public_html/runtime/cache/f9': No such file or directory
+find: '/home/d/doorhankrd/calc.doorhan-krd.ru/public_html/runtime/cache/fe': No such file or directory
+find: '/home/d/doorhankrd/calc.doorhan-krd.ru/public_html/runtime/cache/b8': No such file or directory
+find: '/home/d/doorhankrd/calc.doorhan-krd.ru/public_html/runtime/cache/d3': No such file or directory
+find: '/home/d/doorhankrd/calc.doorhan-krd.ru/public_html/runtime/cache/6d': No such file or directory
+find: '/home/d/doorhankrd/calc.doorhan-krd.ru/public_html/runtime/cache/4a': No such file or directory
+find: '/home/d/doorhankrd/calc.doorhan-krd.ru/public_html/runtime/cache/1f': No such file or directory
+find: '/home/d/doorhankrd/calc.doorhan-krd.ru/public_html/runtime/cache/b7': No such file or directory
+find: '/home/d/doorhankrd/calc.doorhan-krd.ru/public_html/runtime/cache/2c': No such file or directory
+find: '/home/d/doorhankrd/calc.doorhan-krd.ru/public_html/runtime/cache/d8': No such file or directory
+find: '/home/d/doorhankrd/calc.doorhan-krd.ru/public_html/runtime/cache/a1': No such file or directory
+find: '/home/d/doorhankrd/calc.doorhan-krd.ru/public_html/runtime/cache/90': No such file or directory
+find: '/home/d/doorhankrd/calc.doorhan-krd.ru/public_html/runtime/cache/f8': No such file or directory
+find: '/home/d/doorhankrd/calc.doorhan-krd.ru/public_html/runtime/cache/1a': No such file or directory
+find: '/home/d/doorhankrd/calc.doorhan-krd.ru/public_html/runtime/cache/e6': No such file or directory
+find: '/home/d/doorhankrd/calc.doorhan-krd.ru/public_html/runtime/cache/8b': No such file or directory
+find: '/home/d/doorhankrd/calc.doorhan-krd.ru/public_html/runtime/cache/f0': No such file or directory
+find: '/home/d/doorhankrd/calc.doorhan-krd.ru/public_html/runtime/cache/28': No such file or directory
+find: '/home/d/doorhankrd/calc.doorhan-krd.ru/public_html/runtime/cache/c1': No such file or directory
+find: '/home/d/doorhankrd/calc.doorhan-krd.ru/public_html/runtime/cache/fa': No such file or directory
+find: '/home/d/doorhankrd/calc.doorhan-krd.ru/public_html/runtime/cache/79': No such file or directory
+find: '/home/d/doorhankrd/calc.doorhan-krd.ru/public_html/runtime/cache/4f': No such file or directory
+find: '/home/d/doorhankrd/calc.doorhan-krd.ru/public_html/runtime/cache/a9': No such file or directory
+find: '/home/d/doorhankrd/calc.doorhan-krd.ru/public_html/runtime/cache/12': No such file or directory
+find: '/home/d/doorhankrd/calc.doorhan-krd.ru/public_html/runtime/cache/2a': No such file or directory
+find: '/home/d/doorhankrd/calc.doorhan-krd.ru/public_html/runtime/cache/0b': No such file or directory
+find: '/home/d/doorhankrd/calc.doorhan-krd.ru/public_html/runtime/cache/d2': No such file or directory
+find: '/home/d/doorhankrd/calc.doorhan-krd.ru/public_html/runtime/cache/64': No such file or directory
+find: '/home/d/doorhankrd/calc.doorhan-krd.ru/public_html/runtime/cache/21': No such file or directory
+find: '/home/d/doorhankrd/calc.doorhan-krd.ru/public_html/runtime/cache/a8': No such file or directory
+find: '/home/d/doorhankrd/calc.doorhan-krd.ru/public_html/runtime/cache/ab': No such file or directory
+find: '/home/d/doorhankrd/calc.doorhan-krd.ru/public_html/runtime/cache/23': No such file or directory
+find: '/home/d/doorhankrd/calc.doorhan-krd.ru/public_html/runtime/cache/7d': No such file or directory
+find: '/home/d/doorhankrd/calc.doorhan-krd.ru/public_html/runtime/cache/8d': No such file or directory
+find: '/home/d/doorhankrd/calc.doorhan-krd.ru/public_html/runtime/cache/49': No such file or directory
+find: '/home/d/doorhankrd/calc.doorhan-krd.ru/public_html/runtime/cache/56': No such file or directory
+find: '/home/d/doorhankrd/calc.doorhan-krd.ru/public_html/runtime/cache/8c': No such file or directory
+find: '/home/d/doorhankrd/calc.doorhan-krd.ru/public_html/runtime/cache/07': No such file or directory
+find: '/home/d/doorhankrd/calc.doorhan-krd.ru/public_html/runtime/cache/24': No such file or directory
+find: '/home/d/doorhankrd/calc.doorhan-krd.ru/public_html/runtime/cache/fd': No such file or directory
+find: '/home/d/doorhankrd/calc.doorhan-krd.ru/public_html/runtime/cache/77': No such file or directory
+find: '/home/d/doorhankrd/calc.doorhan-krd.ru/public_html/runtime/cache/1c': No such file or directory
+find: '/home/d/doorhankrd/calc.doorhan-krd.ru/public_html/runtime/cache/ea': No such file or directory
+find: '/home/d/doorhankrd/calc.doorhan-krd.ru/public_html/runtime/cache/72': No such file or directory
+find: '/home/d/doorhankrd/calc.doorhan-krd.ru/public_html/runtime/cache/ed': No such file or directory
+find: '/home/d/doorhankrd/calc.doorhan-krd.ru/public_html/runtime/cache/b3': No such file or directory
+find: '/home/d/doorhankrd/calc.doorhan-krd.ru/public_html/runtime/cache/67': No such file or directory
+find: '/home/d/doorhankrd/calc.doorhan-krd.ru/public_html/runtime/cache/05': No such file or directory
+find: '/home/d/doorhankrd/calc.doorhan-krd.ru/public_html/runtime/cache/59': No such file or directory
+find: '/home/d/doorhankrd/calc.doorhan-krd.ru/public_html/runtime/cache/e0': No such file or directory
+find: '/home/d/doorhankrd/calc.doorhan-krd.ru/public_html/runtime/cache/c4': No such file or directory
+find: '/home/d/doorhankrd/calc.doorhan-krd.ru/public_html/runtime/cache/0e': No such file or directory
+find: '/home/d/doorhankrd/calc.doorhan-krd.ru/public_html/runtime/cache/69': No such file or directory
+find: '/home/d/doorhankrd/calc.doorhan-krd.ru/public_html/runtime/cache/61': No such file or directory
+find: '/home/d/doorhankrd/calc.doorhan-krd.ru/public_html/runtime/cache/55': No such file or directory
+find: '/home/d/doorhankrd/calc.doorhan-krd.ru/public_html/runtime/cache/29': No such file or directory
+find: '/home/d/doorhankrd/calc.doorhan-krd.ru/public_html/runtime/cache/19': No such file or directory
+find: '/home/d/doorhankrd/calc.doorhan-krd.ru/public_html/runtime/cache/dd': No such file or directory
+find: '/home/d/doorhankrd/calc.doorhan-krd.ru/public_html/runtime/cache/9e': No such file or directory
+find: '/home/d/doorhankrd/calc.doorhan-krd.ru/public_html/runtime/cache/eb': No such file or directory
+find: '/home/d/doorhankrd/calc.doorhan-krd.ru/public_html/runtime/cache/d5': No such file or directory
+find: '/home/d/doorhankrd/calc.doorhan-krd.ru/public_html/runtime/cache/14': No such file or directory
+find: '/home/d/doorhankrd/calc.doorhan-krd.ru/public_html/runtime/cache/00': No such file or directory
+find: '/home/d/doorhankrd/calc.doorhan-krd.ru/public_html/runtime/cache/1d': No such file or directory
+find: '/home/d/doorhankrd/calc.doorhan-krd.ru/public_html/runtime/cache/9d': No such file or directory
+find: '/home/d/doorhankrd/calc.doorhan-krd.ru/public_html/runtime/cache/68': No such file or directory
+find: '/home/d/doorhankrd/calc.doorhan-krd.ru/public_html/runtime/cache/b4': No such file or directory
+find: '/home/d/doorhankrd/calc.doorhan-krd.ru/public_html/runtime/cache/cd': No such file or directory
+find: '/home/d/doorhankrd/calc.doorhan-krd.ru/public_html/runtime/cache/82': No such file or directory
+find: '/home/d/doorhankrd/calc.doorhan-krd.ru/public_html/runtime/cache/a2': No such file or directory
+find: '/home/d/doorhankrd/calc.doorhan-krd.ru/public_html/runtime/cache/54': No such file or directory
+find: '/home/d/doorhankrd/calc.doorhan-krd.ru/public_html/runtime/cache/9f': No such file or directory
+find: '/home/d/doorhankrd/calc.doorhan-krd.ru/public_html/runtime/cache/0a': No such file or directory
+find: '/home/d/doorhankrd/calc.doorhan-krd.ru/public_html/runtime/cache/ef': No such file or directory
+find: '/home/d/doorhankrd/calc.doorhan-krd.ru/public_html/runtime/cache/16': No such file or directory
+find: '/home/d/doorhankrd/calc.doorhan-krd.ru/public_html/runtime/cache/42': No such file or directory
+find: '/home/d/doorhankrd/calc.doorhan-krd.ru/public_html/runtime/cache/df': No such file or directory
+find: '/home/d/doorhankrd/calc.doorhan-krd.ru/public_html/runtime/cache/8e': No such file or directory
+find: '/home/d/doorhankrd/calc.doorhan-krd.ru/public_html/runtime/cache/46': No such file or directory
+find: '/home/d/doorhankrd/calc.doorhan-krd.ru/public_html/runtime/cache/39': No such file or directory
+find: '/home/d/doorhankrd/calc.doorhan-krd.ru/public_html/runtime/cache/47': No such file or directory
+find: '/home/d/doorhankrd/calc.doorhan-krd.ru/public_html/runtime/cache/4e': No such file or directory
+find: '/home/d/doorhankrd/calc.doorhan-krd.ru/public_html/runtime/cache/2d': No such file or directory
+find: '/home/d/doorhankrd/calc.doorhan-krd.ru/public_html/runtime/cache/5a': No such file or directory
+find: '/home/d/doorhankrd/calc.doorhan-krd.ru/public_html/runtime/cache/c6': No such file or directory
+find: '/home/d/doorhankrd/calc.doorhan-krd.ru/public_html/runtime/cache/11': No such file or directory
+find: '/home/d/doorhankrd/calc.doorhan-krd.ru/public_html/runtime/cache/13': No such file or directory
+find: '/home/d/doorhankrd/calc.doorhan-krd.ru/public_html/runtime/cache/b6': No such file or directory
+find: '/home/d/doorhankrd/calc.doorhan-krd.ru/public_html/runtime/cache/96': No such file or directory
+find: '/home/d/doorhankrd/calc.doorhan-krd.ru/public_html/runtime/cache/8f': No such file or directory
+find: '/home/d/doorhankrd/calc.doorhan-krd.ru/public_html/runtime/cache/7e': No such file or directory
+find: '/home/d/doorhankrd/calc.doorhan-krd.ru/public_html/runtime/cache/c9': No such file or directory
+find: '/home/d/doorhankrd/calc.doorhan-krd.ru/public_html/runtime/cache/86': No such file or directory
+find: '/home/d/doorhankrd/calc.doorhan-krd.ru/public_html/runtime/cache/b9': No such file or directory
+find: '/home/d/doorhankrd/calc.doorhan-krd.ru/public_html/runtime/cache/bb': No such file or directory
+find: '/home/d/doorhankrd/calc.doorhan-krd.ru/public_html/runtime/cache/9c': No such file or directory
+find: '/home/d/doorhankrd/calc.doorhan-krd.ru/public_html/runtime/cache/6e': No such file or directory
+find: '/home/d/doorhankrd/calc.doorhan-krd.ru/public_html/runtime/cache/db': No such file or directory
+find: '/home/d/doorhankrd/calc.doorhan-krd.ru/public_html/runtime/cache/f6': No such file or directory
+find: '/home/d/doorhankrd/calc.doorhan-krd.ru/public_html/runtime/cache/f1': No such file or directory
+find: '/home/d/doorhankrd/calc.doorhan-krd.ru/public_html/runtime/cache/87': No such file or directory
+find: '/home/d/doorhankrd/calc.doorhan-krd.ru/public_html/runtime/cache/74': No such file or directory
+find: '/home/d/doorhankrd/calc.doorhan-krd.ru/public_html/runtime/cache/e3': No such file or directory
+find: '/home/d/doorhankrd/calc.doorhan-krd.ru/public_html/runtime/cache/18': No such file or directory
+find: '/home/d/doorhankrd/calc.doorhan-krd.ru/public_html/runtime/cache/08': No such file or directory
+find: '/home/d/doorhankrd/calc.doorhan-krd.ru/public_html/runtime/cache/9a': No such file or directory
+find: '/home/d/doorhankrd/calc.doorhan-krd.ru/public_html/runtime/cache/ac': No such file or directory
+find: '/home/d/doorhankrd/calc.doorhan-krd.ru/public_html/runtime/cache/da': No such file or directory
+find: '/home/d/doorhankrd/calc.doorhan-krd.ru/public_html/runtime/cache/99': No such file or directory
+find: '/home/d/doorhankrd/calc.doorhan-krd.ru/public_html/runtime/cache/e5': No such file or directory
+find: '/home/d/doorhankrd/calc.doorhan-krd.ru/public_html/runtime/cache/62': No such file or directory
+find: '/home/d/doorhankrd/calc.doorhan-krd.ru/public_html/runtime/cache/1b': No such file or directory
+find: '/home/d/doorhankrd/calc.doorhan-krd.ru/public_html/runtime/cache/a5': No such file or directory
+find: '/home/d/doorhankrd/calc.doorhan-krd.ru/public_html/runtime/cache/38': No such file or directory
+find: '/home/d/doorhankrd/calc.doorhan-krd.ru/public_html/runtime/cache/7f': No such file or directory
+find: '/home/d/doorhankrd/calc.doorhan-krd.ru/public_html/runtime/cache/c8': No such file or directory
+find: '/home/d/doorhankrd/calc.doorhan-krd.ru/public_html/runtime/cache/97': No such file or directory
+find: '/home/d/doorhankrd/calc.doorhan-krd.ru/public_html/runtime/cache/92': No such file or directory
+find: '/home/d/doorhankrd/calc.doorhan-krd.ru/public_html/runtime/cache/73': No such file or directory
+find: '/home/d/doorhankrd/calc.doorhan-krd.ru/public_html/runtime/cache/20': No such file or directory
+find: '/home/d/doorhankrd/calc.doorhan-krd.ru/public_html/runtime/cache/d4': No such file or directory
+find: '/home/d/doorhankrd/calc.doorhan-krd.ru/public_html/runtime/cache/80': No such file or directory
+find: '/home/d/doorhankrd/calc.doorhan-krd.ru/public_html/runtime/cache/35': No such file or directory
+find: '/home/d/doorhankrd/calc.doorhan-krd.ru/public_html/runtime/cache/b0': No such file or directory
+find: '/home/d/doorhankrd/calc.doorhan-krd.ru/public_html/runtime/cache/98': No such file or directory
+find: '/home/d/doorhankrd/calc.doorhan-krd.ru/public_html/runtime/cache/2e': No such file or directory
+find: '/home/d/doorhankrd/calc.doorhan-krd.ru/public_html/runtime/cache/36': No such file or directory
+find: '/home/d/doorhankrd/calc.doorhan-krd.ru/public_html/runtime/cache/50': No such file or directory
+find: '/home/d/doorhankrd/calc.doorhan-krd.ru/public_html/runtime/cache/af': No such file or directory
+find: '/home/d/doorhankrd/calc.doorhan-krd.ru/public_html/runtime/cache/4c': No such file or directory
+find: '/home/d/doorhankrd/calc.doorhan-krd.ru/public_html/runtime/cache/48': No such file or directory
+find: '/home/d/doorhankrd/calc.doorhan-krd.ru/public_html/runtime/cache/bf': No such file or directory
+find: '/home/d/doorhankrd/calc.doorhan-krd.ru/public_html/runtime/cache/26': No such file or directory
+find: '/home/d/doorhankrd/calc.doorhan-krd.ru/public_html/runtime/cache/e9': No such file or directory
+find: '/home/d/doorhankrd/calc.doorhan-krd.ru/public_html/runtime/cache/d7': No such file or directory
+find: '/home/d/doorhankrd/calc.doorhan-krd.ru/public_html/runtime/cache/27': No such file or directory
+find: '/home/d/doorhankrd/calc.doorhan-krd.ru/public_html/runtime/cache/22': No such file or directory
+find: '/home/d/doorhankrd/calc.doorhan-krd.ru/public_html/runtime/cache/be': No such file or directory
+find: '/home/d/doorhankrd/calc.doorhan-krd.ru/public_html/runtime/cache/17': No such file or directory
+find: '/home/d/doorhankrd/calc.doorhan-krd.ru/public_html/runtime/cache/e4': No such file or directory
+find: '/home/d/doorhankrd/calc.doorhan-krd.ru/public_html/runtime/cache/fb': No such file or directory
+find: '/home/d/doorhankrd/calc.doorhan-krd.ru/public_html/runtime/cache/6a': No such file or directory
+find: '/home/d/doorhankrd/calc.doorhan-krd.ru/public_html/runtime/cache/33': No such file or directory
+find: '/home/d/doorhankrd/calc.doorhan-krd.ru/public_html/runtime/cache/32': No such file or directory
+find: '/home/d/doorhankrd/calc.doorhan-krd.ru/public_html/runtime/cache/04': No such file or directory
+find: '/home/d/doorhankrd/calc.doorhan-krd.ru/public_html/runtime/cache/0c': No such file or directory
+find: '/home/d/doorhankrd/calc.doorhan-krd.ru/public_html/runtime/cache/ec': No such file or directory
+find: '/home/d/doorhankrd/calc.doorhan-krd.ru/public_html/runtime/cache/75': No such file or directory
+find: '/home/d/doorhankrd/calc.doorhan-krd.ru/public_html/runtime/cache/e8': No such file or directory
+find: '/home/d/doorhankrd/calc.doorhan-krd.ru/public_html/runtime/cache/30': No such file or directory
+find: '/home/d/doorhankrd/calc.doorhan-krd.ru/public_html/runtime/cache/65': No such file or directory
+find: '/home/d/doorhankrd/calc.doorhan-krd.ru/public_html/runtime/cache/71': No such file or directory
+find: '/home/d/doorhankrd/calc.doorhan-krd.ru/public_html/runtime/cache/88': No such file or directory
+find: '/home/d/doorhankrd/calc.doorhan-krd.ru/public_html/runtime/cache/ee': No such file or directory
+find: '/home/d/doorhankrd/calc.doorhan-krd.ru/public_html/runtime/cache/10': No such file or directory
+find: '/home/d/doorhankrd/calc.doorhan-krd.ru/public_html/runtime/cache/81': No such file or directory
+find: '/home/d/doorhankrd/calc.doorhan-krd.ru/public_html/runtime/cache/3d': No such file or directory
+find: '/home/d/doorhankrd/calc.doorhan-krd.ru/public_html/runtime/cache/43': No such file or directory
+find: '/home/d/doorhankrd/calc.doorhan-krd.ru/public_html/runtime/cache/a4': No such file or directory
+find: '/home/d/doorhankrd/calc.doorhan-krd.ru/public_html/runtime/cache/2b': No such file or directory
+find: '/home/d/doorhankrd/calc.doorhan-krd.ru/public_html/runtime/cache/c2': No such file or directory
+find: '/home/d/doorhankrd/calc.doorhan-krd.ru/public_html/runtime/cache/15': No such file or directory
+find: '/home/d/doorhankrd/calc.doorhan-krd.ru/public_html/runtime/cache/09': No such file or directory
+find: '/home/d/doorhankrd/calc.doorhan-krd.ru/public_html/runtime/cache/78': No such file or directory
+find: '/home/d/doorhankrd/calc.doorhan-krd.ru/public_html/runtime/cache/ba': No such file or directory
+find: '/home/d/doorhankrd/calc.doorhan-krd.ru/public_html/runtime/cache/c7': No such file or directory
+find: '/home/d/doorhankrd/calc.doorhan-krd.ru/public_html/runtime/cache/2f': No such file or directory
+find: '/home/d/doorhankrd/calc.doorhan-krd.ru/public_html/runtime/cache/ad': No such file or directory
+find: '/home/d/doorhankrd/calc.doorhan-krd.ru/public_html/runtime/cache/91': No such file or directory
+find: '/home/d/doorhankrd/calc.doorhan-krd.ru/public_html/runtime/cache/f5': No such file or directory
+find: '/home/d/doorhankrd/calc.doorhan-krd.ru/public_html/runtime/cache/a6': No such file or directory
+find: '/home/d/doorhankrd/calc.doorhan-krd.ru/public_html/runtime/cache/76': No such file or directory
+find: '/home/d/doorhankrd/calc.doorhan-krd.ru/public_html/runtime/cache/c3': No such file or directory
+find: '/home/d/doorhankrd/calc.doorhan-krd.ru/public_html/runtime/cache/3e': No such file or directory
+find: '/home/d/doorhankrd/calc.doorhan-krd.ru/public_html/runtime/cache/8a': No such file or directory
+find: '/home/d/doorhankrd/calc.doorhan-krd.ru/public_html/runtime/cache/9b': No such file or directory
+find: '/home/d/doorhankrd/calc.doorhan-krd.ru/public_html/runtime/cache/d1': No such file or directory
+find: '/home/d/doorhankrd/calc.doorhan-krd.ru/public_html/runtime/cache/95': No such file or directory
+find: '/home/d/doorhankrd/calc.doorhan-krd.ru/public_html/runtime/cache/b1': No such file or directory
+find: '/home/d/doorhankrd/calc.doorhan-krd.ru/public_html/runtime/cache/ae': No such file or directory
+find: '/home/d/doorhankrd/calc.doorhan-krd.ru/public_html/runtime/cache/03': No such file or directory
+find: '/home/d/doorhankrd/calc.doorhan-krd.ru/public_html/runtime/cache/45': No such file or directory
+find: '/home/d/doorhankrd/calc.doorhan-krd.ru/public_html/runtime/cache/c5': No such file or directory
+find: '/home/d/doorhankrd/calc.doorhan-krd.ru/public_html/runtime/cache/d6': No such file or directory
+find: '/home/d/doorhankrd/calc.doorhan-krd.ru/public_html/runtime/cache/ca': No such file or directory
+find: '/home/d/doorhankrd/calc.doorhan-krd.ru/public_html/runtime/cache/37': No such file or directory
+find: '/home/d/doorhankrd/calc.doorhan-krd.ru/public_html/runtime/cache/f7': No such file or directory
+find: '/home/d/doorhankrd/calc.doorhan-krd.ru/public_html/runtime/cache/d0': No such file or directory
+find: '/home/d/doorhankrd/calc.doorhan-krd.ru/public_html/runtime/cache/57': No such file or directory
+find: '/home/d/doorhankrd/calc.doorhan-krd.ru/public_html/runtime/cache/85': No such file or directory
+find: '/home/d/doorhankrd/calc.doorhan-krd.ru/public_html/runtime/cache/a0': No such file or directory
+find: '/home/d/doorhankrd/calc.doorhan-krd.ru/public_html/runtime/cache/d9': No such file or directory
+find: '/home/d/doorhankrd/calc.doorhan-krd.ru/public_html/runtime/cache/34': No such file or directory
+find: '/home/d/doorhankrd/calc.doorhan-krd.ru/public_html/runtime/cache/fc': No such file or directory
+find: '/home/d/doorhankrd/calc.doorhan-krd.ru/public_html/runtime/cache/cf': No such file or directory
+find: '/home/d/doorhankrd/calc.doorhan-krd.ru/public_html/runtime/cache/3c': No such file or directory
+find: '/home/d/doorhankrd/calc.doorhan-krd.ru/public_html/runtime/cache/c0': No such file or directory
+find: '/home/d/doorhankrd/calc.doorhan-krd.ru/public_html/runtime/cache/b5': No such file or directory
+find: '/home/d/doorhankrd/calc.doorhan-krd.ru/public_html/runtime/cache/94': No such file or directory
+find: '/home/d/doorhankrd/calc.doorhan-krd.ru/public_html/runtime/cache/58': No such file or directory
+find: '/home/d/doorhankrd/calc.doorhan-krd.ru/public_html/runtime/cache/31': No such file or directory
+find: '/home/d/doorhankrd/calc.doorhan-krd.ru/public_html/runtime/cache/6b': No such file or directory
+find: '/home/d/doorhankrd/calc.doorhan-krd.ru/public_html/runtime/cache/3f': No such file or directory
+find: '/home/d/doorhankrd/calc.doorhan-krd.ru/public_html/runtime/cache/5b': No such file or directory
+find: '/home/d/doorhankrd/calc.doorhan-krd.ru/public_html/runtime/cache/53': No such file or directory
+find: '/home/d/doorhankrd/calc.doorhan-krd.ru/public_html/runtime/cache/ce': No such file or directory
+find: '/home/d/doorhankrd/calc.doorhan-krd.ru/public_html/runtime/cache/52': No such file or directory
+find: '/home/d/doorhankrd/calc.doorhan-krd.ru/public_html/runtime/cache/bc': No such file or directory
+find: '/home/d/doorhankrd/calc.doorhan-krd.ru/public_html/runtime/cache/5c': No such file or directory
+find: '/home/d/doorhankrd/calc.doorhan-krd.ru/public_html/runtime/cache/f3': No such file or directory
+find: '/home/d/doorhankrd/calc.doorhan-krd.ru/public_html/runtime/cache/44': No such file or directory
+find: '/home/d/doorhankrd/calc.doorhan-krd.ru/public_html/runtime/cache/de': No such file or directory
+find: '/home/d/doorhankrd/calc.doorhan-krd.ru/public_html/runtime/cache/e7': No such file or directory
+find: '/home/d/doorhankrd/calc.doorhan-krd.ru/public_html/runtime/cache/3b': No such file or directory
+find: '/home/d/doorhankrd/calc.doorhan-krd.ru/public_html/runtime/cache/dc': No such file or directory
+find: '/home/d/doorhankrd/calc.doorhan-krd.ru/public_html/runtime/cache/5d': No such file or directory
+find: '/home/d/doorhankrd/calc.doorhan-krd.ru/public_html/runtime/cache/4b': No such file or directory
+find: '/home/d/doorhankrd/calc.doorhan-krd.ru/public_html/runtime/cache/aa': No such file or directory
+find: '/home/d/doorhankrd/calc.doorhan-krd.ru/public_html/runtime/cache/f2': No such file or directory
+find: '/home/d/doorhankrd/calc.doorhan-krd.ru/public_html/runtime/cache/89': No such file or directory
+find: '/home/d/doorhankrd/calc.doorhan-krd.ru/public_html/runtime/cache/1e': No such file or directory
+find: '/home/d/doorhankrd/calc.doorhan-krd.ru/public_html/runtime/cache/5e': No such file or directory
+find: '/home/d/doorhankrd/calc.doorhan-krd.ru/public_html/runtime/cache/b2': No such file or directory
+find: '/home/d/doorhankrd/calc.doorhan-krd.ru/public_html/runtime/cache/25': No such file or directory
+find: '/home/d/doorhankrd/calc.doorhan-krd.ru/public_html/runtime/cache/70': No such file or directory
+find: '/home/d/doorhankrd/calc.doorhan-krd.ru/public_html/runtime/cache/83': No such file or directory
+find: '/home/d/doorhankrd/calc.doorhan-krd.ru/public_html/runtime/cache/3a': No such file or directory
+find: '/home/d/doorhankrd/calc.doorhan-krd.ru/public_html/runtime/cache/a7': No such file or directory
+find: '/home/d/doorhankrd/calc.doorhan-krd.ru/public_html/runtime/cache/01': No such file or directory
+find: '/home/d/doorhankrd/calc.doorhan-krd.ru/public_html/runtime/cache/6f': No such file or directory
+find: '/home/d/doorhankrd/calc.doorhan-krd.ru/public_html/runtime/cache/7b': No such file or directory
+find: '/home/d/doorhankrd/calc.doorhan-krd.ru/public_html/runtime/cache/ff': No such file or directory
+find: '/home/d/doorhankrd/calc.doorhan-krd.ru/public_html/runtime/cache/66': No such file or directory
+find: '/home/d/doorhankrd/calc.doorhan-krd.ru/public_html/runtime/cache/6c': No such file or directory
+find: '/home/d/doorhankrd/calc.doorhan-krd.ru/public_html/runtime/cache/bd': No such file or directory
+find: '/home/d/doorhankrd/calc.doorhan-krd.ru/public_html/runtime/cache/41': No such file or directory
+find: '/home/d/doorhankrd/calc.doorhan-krd.ru/public_html/runtime/cache/63': No such file or directory
+find: '/home/d/doorhankrd/calc.doorhan-krd.ru/public_html/runtime/cache/60': No such file or directory
+find: '/home/d/doorhankrd/calc.doorhan-krd.ru/public_html/runtime/cache/93': No such file or directory
+find: '/home/d/doorhankrd/calc.doorhan-krd.ru/public_html/runtime/cache/a3': No such file or directory
+find: '/home/d/doorhankrd/calc.doorhan-krd.ru/public_html/runtime/gii-2.0.52': No such file or directory
+find: '/home/d/doorhankrd/calc.doorhan-krd.ru/public_html/runtime/URI': No such file or directory
+find: '/home/d/doorhankrd/calc.doorhan-krd.ru/public_html/runtime/debug': No such file or directory
+find: '/home/d/doorhankrd/calc.doorhan-krd.ru/public_html/web/assets/b54abd20/site/assets/js': No such file or directory
+find: '/home/d/doorhankrd/calc.doorhan-krd.ru/public_html/web/assets/b54abd20/site/content': No such file or directory
+find: '/home/d/doorhankrd/calc.doorhan-krd.ru/public_html/web/assets/b54abd20/site/data': No such file or directory
+find: '/home/d/doorhankrd/calc.doorhan-krd.ru/public_html/web/assets/b54abd20/site/layouts': No such file or directory
+find: '/home/d/doorhankrd/calc.doorhan-krd.ru/public_html/web/assets/b54abd20/dist': No such file or directory
+find: '/home/d/doorhankrd/calc.doorhan-krd.ru/public_html/web/assets/b54abd20/scss': No such file or directory
+find: '/home/d/doorhankrd/calc.doorhan-krd.ru/public_html/web/assets/b54abd20/js': No such file or directory
+find: '/home/d/doorhankrd/calc.doorhan-krd.ru/public_html/web/assets/b54abd20/build': No such file or directory
+find: '/home/d/doorhankrd/calc.doorhan-krd.ru/public_html/web/assets/b54abd20/nuget': No such file or directory
+find: '/home/d/doorhankrd/calc.doorhan-krd.ru/public_html/web/assets/fcf79a26': No such file or directory
+find: '/home/d/doorhankrd/calc.doorhan-krd.ru/public_html/web/assets/5aedcfd7': No such file or directory
+find: '/home/d/doorhankrd/calc.doorhan-krd.ru/public_html/web/assets/51092b5': No such file or directory
+find: '/home/d/doorhankrd/calc.doorhan-krd.ru/public_html/web/assets/be3cd535': No such file or directory
+find: '/home/d/doorhankrd/calc.doorhan-krd.ru/public_html/web/assets/978118d0': No such file or directory
+find: '/home/d/doorhankrd/calc.doorhan-krd.ru/public_html/web/assets/6894f1d9': No such file or directory
+find: '/home/d/doorhankrd/calc.doorhan-krd.ru/public_html/web/assets/eebfbde4': No such file or directory
+find: '/home/d/doorhankrd/calc.doorhan-krd.ru/public_html/web/assets/css': No such file or directory
+find: '/home/d/doorhankrd/calc.doorhan-krd.ru/public_html/web/assets/cf6ea396': No such file or directory
+find: '/home/d/doorhankrd/calc.doorhan-krd.ru/public_html/web/assets/js': No such file or directory
+find: '/home/d/doorhankrd/calc.doorhan-krd.ru/public_html/web/assets/211795f7': No such file or directory
+find: '/home/d/doorhankrd/calc.doorhan-krd.ru/public_html/web/assets/c607ebcb': No such file or directory
+find: '/home/d/doorhankrd/calc.doorhan-krd.ru/public_html/web/assets/25f225f2': No such file or directory
+find: '/home/d/doorhankrd/calc.doorhan-krd.ru/public_html/web/assets/1184645c': No such file or directory
+find: '/home/d/doorhankrd/calc.doorhan-krd.ru/public_html/web/assets/239c8e06': No such file or directory
+find: '/home/d/doorhankrd/calc.doorhan-krd.ru/public_html/web/excel': No such file or directory
+find: '/home/d/doorhankrd/calc.doorhan-krd.ru/public_html/web/layout': No such file or directory
+find: '/home/d/doorhankrd/calc.doorhan-krd.ru/public_html/web/css': No such file or directory
+find: '/home/d/doorhankrd/calc.doorhan-krd.ru/public_html/web/js': No such file or directory
+find: '/home/d/doorhankrd/calc.doorhan-krd.ru/public_html/web/specifications': No such file or directory
+hint: Using 'master' as the name for the initial branch. This default branch name
+hint: is subject to change. To configure the initial branch name to use in all
+hint: of your new repositories, which will suppress this warning, call:
+hint: 
+hint: 	git config --global init.defaultBranch <name>
+hint: 
+hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+hint: 'development'. The just-created branch can be renamed via this command:
+hint: 
+hint: 	git branch -m <name>
+Initialized empty Git repository in /home/d/doorhankrd/calc.doorhan-krd.ru/public_html/.git/
+[INFO] Git init done
+[INFO] Remote added
+[deploy] Обновляем код из репозитория с rebase...
+remote: Repository not found.
+fatal: repository 'https://github.com/apfursa/8-calc.doorhan-krd.git/' not found
+[ERROR] Git pull --rebase failed
+===== DEPLOY START: Thu Jul 10 13:04:29 MSK 2025 =====
+[CLEAN] Cleaning working directory (excluding .env and autopullFromGitHub)...
+hint: Using 'master' as the name for the initial branch. This default branch name
+hint: is subject to change. To configure the initial branch name to use in all
+hint: of your new repositories, which will suppress this warning, call:
+hint: 
+hint: 	git config --global init.defaultBranch <name>
+hint: 
+hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+hint: 'development'. The just-created branch can be renamed via this command:
+hint: 
+hint: 	git branch -m <name>
+Initialized empty Git repository in /home/d/doorhankrd/calc.doorhan-krd.ru/public_html/.git/
+[INFO] Git init done
+[INFO] Remote added
+[deploy] Обновляем код из репозитория с rebase...
+From https://github.com/webmens-ru/8-calc.doorhan-krd
+ * branch            master     -> FETCH_HEAD
+ * [new branch]      master     -> origin/master
+error: The following untracked working tree files would be overwritten by merge:
+	.gitignore
+Please move or remove them before you merge.
+Aborting
+[ERROR] Git pull --rebase failed
+===== DEPLOY START: Thu Jul 10 13:08:18 MSK 2025 =====
+[CLEAN] Cleaning working directory (excluding .env and autopullFromGitHub)...
+hint: Using 'master' as the name for the initial branch. This default branch name
+hint: is subject to change. To configure the initial branch name to use in all
+hint: of your new repositories, which will suppress this warning, call:
+hint: 
+hint: 	git config --global init.defaultBranch <name>
+hint: 
+hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+hint: 'development'. The just-created branch can be renamed via this command:
+hint: 
+hint: 	git branch -m <name>
+Initialized empty Git repository in /home/d/doorhankrd/calc.doorhan-krd.ru/public_html/.git/
+[INFO] Git init done
+[INFO] Remote added
+[deploy] Обновляем код из репозитория с rebase...
+From https://github.com/webmens-ru/8-calc.doorhan-krd
+ * branch            master     -> FETCH_HEAD
+ * [new branch]      master     -> origin/master
+error: The following untracked working tree files would be overwritten by merge:
+	.gitignore
+Please move or remove them before you merge.
+Aborting
+[ERROR] Git pull --rebase failed
+===== DEPLOY START: Thu Jul 10 13:23:51 MSK 2025 =====
+[CLEAN] Cleaning working directory (excluding .env and autopullFromGitHub)...
+hint: Using 'master' as the name for the initial branch. This default branch name
+hint: is subject to change. To configure the initial branch name to use in all
+hint: of your new repositories, which will suppress this warning, call:
+hint: 
+hint: 	git config --global init.defaultBranch <name>
+hint: 
+hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+hint: 'development'. The just-created branch can be renamed via this command:
+hint: 
+hint: 	git branch -m <name>
+Initialized empty Git repository in /home/d/doorhankrd/calc.doorhan-krd.ru/public_html/.git/
+[INFO] Git init done
+[INFO] Remote added
+[deploy] Обновляем код из репозитория с rebase...
+From https://github.com/webmens-ru/8-calc.doorhan-krd
+ * branch            master     -> FETCH_HEAD
+ * [new branch]      master     -> origin/master
+warning: unable to access '/root/.config/git/attributes': Permission denied
+[INFO] Git pull complete
+===== DEPLOY END: Thu Jul 10 13:23:53 MSK 2025 =====
+===== DEPLOY START: Thu Jul 10 13:38:16 MSK 2025 =====
+[CLEAN] Cleaning working directory (excluding .env and autopullFromGitHub)...
+find: '/home/d/doorhankrd/calc.doorhan-krd.ru/public_html/vendor/fortawesome/font-awesome/.github': No such file or directory
+find: '/home/d/doorhankrd/calc.doorhan-krd.ru/public_html/vendor/fortawesome/font-awesome/js-packages': No such file or directory
+find: '/home/d/doorhankrd/calc.doorhan-krd.ru/public_html/vendor/fortawesome/font-awesome/sprites': No such file or directory
+find: '/home/d/doorhankrd/calc.doorhan-krd.ru/public_html/vendor/fortawesome/font-awesome/otfs': No such file or directory
+find: '/home/d/doorhankrd/calc.doorhan-krd.ru/public_html/vendor/fortawesome/font-awesome/metadata': No such file or directory
+find: '/home/d/doorhankrd/calc.doorhan-krd.ru/public_html/vendor/fortawesome/font-awesome/scss': No such file or directory
+find: '/home/d/doorhankrd/calc.doorhan-krd.ru/public_html/vendor/fortawesome/font-awesome/webfonts': No such file or directory
+find: '/home/d/doorhankrd/calc.doorhan-krd.ru/public_html/vendor/fortawesome/font-awesome/css': No such file or directory
+find: '/home/d/doorhankrd/calc.doorhan-krd.ru/public_html/vendor/fortawesome/font-awesome/js': No such file or directory
+find: '/home/d/doorhankrd/calc.doorhan-krd.ru/public_html/vendor/fortawesome/font-awesome/less': No such file or directory
+find: '/home/d/doorhankrd/calc.doorhan-krd.ru/public_html/vendor/psy': No such file or directory
+find: '/home/d/doorhankrd/calc.doorhan-krd.ru/public_html/vendor/ralouphie': No such file or directory
+find: '/home/d/doorhankrd/calc.doorhan-krd.ru/public_html/vendor/phpoffice': No such file or directory
+find: '/home/d/doorhankrd/calc.doorhan-krd.ru/public_html/vendor/ezyang': No such file or directory
+find: '/home/d/doorhankrd/calc.doorhan-krd.ru/public_html/vendor/markbaker': No such file or directory
+find: '/home/d/doorhankrd/calc.doorhan-krd.ru/public_html/vendor/rmrevin': No such file or directory
+find: '/home/d/doorhankrd/calc.doorhan-krd.ru/public_html/vendor/masterminds': No such file or directory
+find: '/home/d/doorhankrd/calc.doorhan-krd.ru/public_html/vendor/phpunit': No such file or directory
+find: '/home/d/doorhankrd/calc.doorhan-krd.ru/public_html/vendor/myclabs': No such file or directory
+find: '/home/d/doorhankrd/calc.doorhan-krd.ru/public_html/vendor/egulias': No such file or directory
+find: '/home/d/doorhankrd/calc.doorhan-krd.ru/public_html/vendor/codeception': No such file or directory
+find: '/home/d/doorhankrd/calc.doorhan-krd.ru/public_html/vendor/sabberworm': No such file or directory
+find: '/home/d/doorhankrd/calc.doorhan-krd.ru/public_html/vendor/phpstan': No such file or directory
+find: '/home/d/doorhankrd/calc.doorhan-krd.ru/public_html/vendor/phpspec': No such file or directory
+find: '/home/d/doorhankrd/calc.doorhan-krd.ru/public_html/vendor/bin': No such file or directory
+find: '/home/d/doorhankrd/calc.doorhan-krd.ru/public_html/vendor/dompdf': No such file or directory
+find: '/home/d/doorhankrd/calc.doorhan-krd.ru/public_html/vendor/proget-hq': No such file or directory
+find: '/home/d/doorhankrd/calc.doorhan-krd.ru/public_html/vendor/yiisoft': No such file or directory
+find: '/home/d/doorhankrd/calc.doorhan-krd.ru/public_html/vendor/guzzlehttp': No such file or directory
+find: '/home/d/doorhankrd/calc.doorhan-krd.ru/public_html/vendor/doctrine': No such file or directory
+find: '/home/d/doorhankrd/calc.doorhan-krd.ru/public_html/vendor/symfony': No such file or directory
+find: '/home/d/doorhankrd/calc.doorhan-krd.ru/public_html/vendor/fakerphp': No such file or directory
+find: '/home/d/doorhankrd/calc.doorhan-krd.ru/public_html/vendor/bower-asset': No such file or directory
+find: '/home/d/doorhankrd/calc.doorhan-krd.ru/public_html/vendor/phar-io': No such file or directory
+find: '/home/d/doorhankrd/calc.doorhan-krd.ru/public_html/vendor/kartik-v': No such file or directory
+find: '/home/d/doorhankrd/calc.doorhan-krd.ru/public_html/vendor/psr': No such file or directory
+find: '/home/d/doorhankrd/calc.doorhan-krd.ru/public_html/vendor/nikic': No such file or directory
+find: '/home/d/doorhankrd/calc.doorhan-krd.ru/public_html/vendor/webmens-ru': No such file or directory
+find: '/home/d/doorhankrd/calc.doorhan-krd.ru/public_html/vendor/composer': No such file or directory
+find: '/home/d/doorhankrd/calc.doorhan-krd.ru/public_html/vendor/select2': No such file or directory
+find: '/home/d/doorhankrd/calc.doorhan-krd.ru/public_html/vendor/sebastian': No such file or directory
+find: '/home/d/doorhankrd/calc.doorhan-krd.ru/public_html/vendor/monolog': No such file or directory
+find: '/home/d/doorhankrd/calc.doorhan-krd.ru/public_html/vendor/theseer': No such file or directory
+find: '/home/d/doorhankrd/calc.doorhan-krd.ru/public_html/vendor/cebe': No such file or directory
+find: '/home/d/doorhankrd/calc.doorhan-krd.ru/public_html/vendor/squizlabs': No such file or directory
+hint: Using 'master' as the name for the initial branch. This default branch name
+hint: is subject to change. To configure the initial branch name to use in all
+hint: of your new repositories, which will suppress this warning, call:
+hint: 
+hint: 	git config --global init.defaultBranch <name>
+hint: 
+hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+hint: 'development'. The just-created branch can be renamed via this command:
+hint: 
+hint: 	git branch -m <name>
+Initialized empty Git repository in /home/d/doorhankrd/calc.doorhan-krd.ru/public_html/.git/
+[INFO] Git init done
+[INFO] Remote added
+[deploy] Обновляем код из репозитория с rebase...
+From https://github.com/webmens-ru/8-calc.doorhan-krd
+ * branch            master     -> FETCH_HEAD
+ * [new branch]      master     -> origin/master
+error: The following untracked working tree files would be overwritten by merge:
+	.gitignore
+Please move or remove them before you merge.
+Aborting
+[ERROR] Git pull --rebase failed
+===== DEPLOY START: Thu Jul 10 13:41:47 MSK 2025 =====
+Reinitialized existing Git repository in /home/d/doorhankrd/calc.doorhan-krd.ru/public_html/.git/
+[INFO] Git init done
+error: remote origin already exists.
+[ERROR] Failed to add remote origin
+===== DEPLOY START: Thu Jul 10 13:46:33 MSK 2025 =====
+[deploy] Обновляем код из репозитория с rebase...
+From https://github.com/webmens-ru/8-calc.doorhan-krd
+ * branch            master     -> FETCH_HEAD
+   201b1a3..72108fb  master     -> origin/master
+warning: unable to access '/root/.config/git/attributes': Permission denied
+[INFO] Git pull complete
+===== DEPLOY END: Thu Jul 10 13:46:34 MSK 2025 =====
+===== DEPLOY START: Thu Jul 10 13:48:55 MSK 2025 =====
+[deploy] Обновляем код из репозитория с rebase...
+warning: unable to access '/root/.config/git/attributes': Permission denied
+warning: unable to access '/root/.config/git/ignore': Permission denied
+From https://github.com/webmens-ru/8-calc.doorhan-krd
+ * branch            master     -> FETCH_HEAD
+   72108fb..5102983  master     -> origin/master
+warning: unable to access '/root/.config/git/ignore': Permission denied
+warning: unable to access '/root/.config/git/attributes': Permission denied
+Updating 72108fb..5102983
+Fast-forward
+warning: unable to access '/root/.config/git/attributes': Permission denied
+warning: unable to access '/root/.config/git/attributes': Permission denied
+ controllers/wicket/Type1Controller.php | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+[INFO] Git pull complete
+===== DEPLOY END: Thu Jul 10 13:48:56 MSK 2025 =====
+===== DEPLOY START: Thu Jul 10 13:55:59 MSK 2025 =====
+[deploy] Обновляем код из репозитория с rebase...
+warning: unable to access '/root/.config/git/attributes': Permission denied
+warning: unable to access '/root/.config/git/ignore': Permission denied
+From https://github.com/webmens-ru/8-calc.doorhan-krd
+ * branch            master     -> FETCH_HEAD
+   5102983..e0e71ca  master     -> origin/master
+warning: unable to access '/root/.config/git/ignore': Permission denied
+warning: unable to access '/root/.config/git/attributes': Permission denied
+Updating 5102983..e0e71ca
+Fast-forward
+warning: unable to access '/root/.config/git/attributes': Permission denied
+warning: unable to access '/root/.config/git/attributes': Permission denied
+ controllers/wicket/Type1Controller.php | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+[INFO] Git pull complete
+===== DEPLOY END: Thu Jul 10 13:56:00 MSK 2025 =====
+===== DEPLOY START: Thu Jul 10 13:57:45 MSK 2025 =====
+[deploy] Обновляем код из репозитория с rebase...
+warning: unable to access '/root/.config/git/attributes': Permission denied
+warning: unable to access '/root/.config/git/ignore': Permission denied
+From https://github.com/webmens-ru/8-calc.doorhan-krd
+ * branch            master     -> FETCH_HEAD
+   e0e71ca..8f34ba5  master     -> origin/master
+warning: unable to access '/root/.config/git/ignore': Permission denied
+warning: unable to access '/root/.config/git/attributes': Permission denied
+Updating e0e71ca..8f34ba5
+Fast-forward
+warning: unable to access '/root/.config/git/attributes': Permission denied
+warning: unable to access '/root/.config/git/attributes': Permission denied
+ controllers/wicket/Type1Controller.php | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+[INFO] Git pull complete
+===== DEPLOY END: Thu Jul 10 13:57:46 MSK 2025 =====
+===== DEPLOY START: Thu Jul 10 14:03:11 MSK 2025 =====
+[deploy] Обновляем код из репозитория с rebase...
+warning: unable to access '/root/.config/git/attributes': Permission denied
+warning: unable to access '/root/.config/git/ignore': Permission denied
+From https://github.com/webmens-ru/8-calc.doorhan-krd
+ * branch            master     -> FETCH_HEAD
+   8f34ba5..afed11f  master     -> origin/master
+warning: unable to access '/root/.config/git/ignore': Permission denied
+warning: unable to access '/root/.config/git/attributes': Permission denied
+Updating 8f34ba5..afed11f
+Fast-forward
+warning: unable to access '/root/.config/git/attributes': Permission denied
+warning: unable to access '/root/.config/git/attributes': Permission denied
+ migrations/m250710_140100_create_test_table.php | 29 +++++++++++++++++++++++++
+ 1 file changed, 29 insertions(+)
+ create mode 100644 migrations/m250710_140100_create_test_table.php
+[INFO] Git pull complete
+===== DEPLOY END: Thu Jul 10 14:03:13 MSK 2025 =====
+===== DEPLOY START: Thu Jul 10 14:07:26 MSK 2025 =====
+[deploy] Обновляем код из репозитория с rebase...
+warning: unable to access '/root/.config/git/attributes': Permission denied
+warning: unable to access '/root/.config/git/ignore': Permission denied
+From https://github.com/webmens-ru/8-calc.doorhan-krd
+ * branch            master     -> FETCH_HEAD
+   afed11f..fd774ca  master     -> origin/master
+warning: unable to access '/root/.config/git/ignore': Permission denied
+warning: unable to access '/root/.config/git/attributes': Permission denied
+Updating afed11f..fd774ca
+Fast-forward
+warning: unable to access '/root/.config/git/attributes': Permission denied
+warning: unable to access '/root/.config/git/attributes': Permission denied
+ controllers/wicket/Type1Controller.php | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+[INFO] Git pull complete
+===== DEPLOY END: Thu Jul 10 14:07:28 MSK 2025 =====
+===== DEPLOY START: Thu Jul 10 14:19:25 MSK 2025 =====
+[deploy] Обновляем код из репозитория с rebase...
+warning: unable to access '/root/.config/git/attributes': Permission denied
+warning: unable to access '/root/.config/git/ignore': Permission denied
+From https://github.com/webmens-ru/8-calc.doorhan-krd
+ * branch            master     -> FETCH_HEAD
+   fd774ca..1a8a92e  master     -> origin/master
+warning: unable to access '/root/.config/git/ignore': Permission denied
+Updating fd774ca..1a8a92e
+Fast-forward
+warning: unable to access '/root/.config/git/attributes': Permission denied
+warning: unable to access '/root/.config/git/attributes': Permission denied
+ migrations/m250710_140100_create_test_table.php | 29 -------------------------
+ 1 file changed, 29 deletions(-)
+ delete mode 100644 migrations/m250710_140100_create_test_table.php
+[INFO] Git pull complete
+===== DEPLOY END: Thu Jul 10 14:19:27 MSK 2025 =====
+===== DEPLOY START: Thu Jul 10 14:49:04 MSK 2025 =====
+[deploy] Обновляем код из репозитория с rebase...
+warning: unable to access '/root/.config/git/ignore': Permission denied
+From https://github.com/webmens-ru/8-calc.doorhan-krd
+ * branch            master     -> FETCH_HEAD
+   1a8a92e..0ae4cee  master     -> origin/master
+warning: unable to access '/root/.config/git/ignore': Permission denied
+warning: unable to access '/root/.config/git/attributes': Permission denied
+Updating 1a8a92e..0ae4cee
+Fast-forward
+warning: unable to access '/root/.config/git/attributes': Permission denied
+warning: unable to access '/root/.config/git/attributes': Permission denied
+ .gitignore    |  1 +
+ config/db.php | 14 --------------
+ 2 files changed, 1 insertion(+), 14 deletions(-)
+ delete mode 100644 config/db.php
+[INFO] Git pull complete
+===== DEPLOY END: Thu Jul 10 14:49:05 MSK 2025 =====
+===== DEPLOY START: Thu Jul 10 14:54:06 MSK 2025 =====
+[deploy] Обновляем код из репозитория с rebase...
+warning: unable to access '/root/.config/git/attributes': Permission denied
+warning: unable to access '/root/.config/git/ignore': Permission denied
+From https://github.com/webmens-ru/8-calc.doorhan-krd
+ * branch            master     -> FETCH_HEAD
+   0ae4cee..668b20c  master     -> origin/master
+warning: unable to access '/root/.config/git/ignore': Permission denied
+warning: unable to access '/root/.config/git/attributes': Permission denied
+Updating 0ae4cee..668b20c
+Fast-forward
+warning: unable to access '/root/.config/git/attributes': Permission denied
+warning: unable to access '/root/.config/git/attributes': Permission denied
+ controllers/wicket/Type1Controller.php | 3 ---
+ 1 file changed, 3 deletions(-)
+[INFO] Git pull complete
+===== DEPLOY END: Thu Jul 10 14:54:07 MSK 2025 =====
+===== DEPLOY START: Thu Jul 10 14:56:56 MSK 2025 =====
+[deploy] Обновляем код из репозитория с rebase...
+warning: unable to access '/root/.config/git/attributes': Permission denied
+warning: unable to access '/root/.config/git/ignore': Permission denied
+From https://github.com/webmens-ru/8-calc.doorhan-krd
+ * branch            master     -> FETCH_HEAD
+Already up to date.
+[INFO] Git pull complete
+===== DEPLOY END: Thu Jul 10 14:56:57 MSK 2025 =====
+===== DEPLOY START: Thu Jul 10 14:58:57 MSK 2025 =====
+[deploy] Обновляем код из репозитория с rebase...
+warning: unable to access '/root/.config/git/ignore': Permission denied
+From https://github.com/webmens-ru/8-calc.doorhan-krd
+ * branch            master     -> FETCH_HEAD
+   668b20c..d025d1d  master     -> origin/master
+warning: unable to access '/root/.config/git/ignore': Permission denied
+Updating 668b20c..d025d1d
+Fast-forward
+[INFO] Git pull complete
+===== DEPLOY END: Thu Jul 10 14:58:58 MSK 2025 =====
+===== DEPLOY START: Thu Jul 10 15:02:06 MSK 2025 =====
+[deploy] Обновляем код из репозитория с rebase...
+warning: unable to access '/root/.config/git/ignore': Permission denied
+From https://github.com/webmens-ru/8-calc.doorhan-krd
+ * branch            master     -> FETCH_HEAD
+Already up to date.
+[INFO] Git pull complete
+===== DEPLOY END: Thu Jul 10 15:02:07 MSK 2025 =====
+===== DEPLOY START: Thu Jul 10 15:03:08 MSK 2025 =====
+[deploy] Обновляем код из репозитория с rebase...
+warning: unable to access '/root/.config/git/ignore': Permission denied
+From https://github.com/webmens-ru/8-calc.doorhan-krd
+ * branch            master     -> FETCH_HEAD
+   d025d1d..ecf3164  master     -> origin/master
+warning: unable to access '/root/.config/git/ignore': Permission denied
+warning: unable to access '/root/.config/git/attributes': Permission denied
+Updating d025d1d..ecf3164
+Fast-forward
+warning: unable to access '/root/.config/git/attributes': Permission denied
+warning: unable to access '/root/.config/git/attributes': Permission denied
+ controllers/wicket/Type2Controller.php | 2 ++
+ 1 file changed, 2 insertions(+)
+[INFO] Git pull complete
+===== DEPLOY END: Thu Jul 10 15:03:10 MSK 2025 =====
+===== DEPLOY START: Thu Jul 10 15:06:50 MSK 2025 =====
+[deploy] Обновляем код из репозитория с rebase...
+warning: unable to access '/root/.config/git/attributes': Permission denied
+warning: unable to access '/root/.config/git/ignore': Permission denied
+From https://github.com/webmens-ru/8-calc.doorhan-krd
+ * branch            master     -> FETCH_HEAD
+Already up to date.
+[INFO] Git pull complete
+===== DEPLOY END: Thu Jul 10 15:06:51 MSK 2025 =====
+===== DEPLOY START: Thu Jul 10 15:10:50 MSK 2025 =====
+[deploy] Обновляем код из репозитория с rebase...
+warning: unable to access '/root/.config/git/ignore': Permission denied
+From https://github.com/webmens-ru/8-calc.doorhan-krd
+ * branch            master     -> FETCH_HEAD
+Already up to date.
+[INFO] Git pull complete
+===== DEPLOY END: Thu Jul 10 15:10:51 MSK 2025 =====
+===== DEPLOY START: Thu Jul 10 15:12:46 MSK 2025 =====
+[deploy] Обновляем код из репозитория с rebase...
+warning: unable to access '/root/.config/git/ignore': Permission denied
+From https://github.com/webmens-ru/8-calc.doorhan-krd
+ * branch            master     -> FETCH_HEAD
+   ecf3164..41fdb22  master     -> origin/master
+warning: unable to access '/root/.config/git/ignore': Permission denied
+warning: unable to access '/root/.config/git/attributes': Permission denied
+Updating ecf3164..41fdb22
+Fast-forward
+warning: unable to access '/root/.config/git/attributes': Permission denied
+warning: unable to access '/root/.config/git/attributes': Permission denied
+ controllers/wicket/Type2Controller.php | 3 ++-
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+[INFO] Git pull complete
+===== DEPLOY END: Thu Jul 10 15:12:47 MSK 2025 =====
+===== DEPLOY START: Thu Jul 10 15:18:25 MSK 2025 =====
+[deploy] Обновляем код из репозитория с rebase...
+warning: unable to access '/root/.config/git/attributes': Permission denied
+warning: unable to access '/root/.config/git/ignore': Permission denied
+From https://github.com/webmens-ru/8-calc.doorhan-krd
+ * branch            master     -> FETCH_HEAD
+   41fdb22..9653c7f  master     -> origin/master
+warning: unable to access '/root/.config/git/ignore': Permission denied
+warning: unable to access '/root/.config/git/attributes': Permission denied
+Updating 41fdb22..9653c7f
+Fast-forward
+warning: unable to access '/root/.config/git/attributes': Permission denied
+warning: unable to access '/root/.config/git/attributes': Permission denied
+ controllers/wicket/Type2Controller.php | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+[INFO] Git pull complete
+===== DEPLOY END: Thu Jul 10 15:18:26 MSK 2025 =====
+===== DEPLOY START: Mon Jul 14 13:51:30 MSK 2025 =====
+[deploy] Обновляем код из репозитория с rebase...
+warning: unable to access '/root/.config/git/attributes': Permission denied
+warning: unable to access '/root/.config/git/ignore': Permission denied
+===== DEPLOY START: Mon Jul 14 13:51:30 MSK 2025 =====
+[deploy] Обновляем код из репозитория с rebase...
+warning: unable to access '/root/.config/git/ignore': Permission denied
+From https://github.com/webmens-ru/8-calc.doorhan-krd
+ * branch            master     -> FETCH_HEAD
+Already up to date.
+[INFO] Git pull complete
+===== DEPLOY END: Mon Jul 14 13:51:31 MSK 2025 =====
+From https://github.com/webmens-ru/8-calc.doorhan-krd
+ * branch            master     -> FETCH_HEAD
+fatal: Cannot rebase onto multiple branches.
+[ERROR] Git pull --rebase failed

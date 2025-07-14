@@ -1,0 +1,17 @@
+RewriteEngine On
+
+# Разрешаем только deploy.php, всё остальное — запрещаем
+RewriteCond %{REQUEST_FILENAME} -f
+RewriteCond %{REQUEST_URI} !/deploy\.php$ [NC]
+RewriteRule ^ - [F]
+
+# Запрещаем листинг папки
+Options -Indexes
+
+# Указываем главную страницу
+DirectoryIndex deploy.php
+
+# Запрет доступа к deploy_log.txt
+<Files "deploy_log.txt">
+    Require all denied
+</Files>
