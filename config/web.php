@@ -20,7 +20,12 @@ $config = [
         'request' => [
             'parsers' => [
 				'application/json' => 'yii\web\JsonParser',
-			],		
+			],
+            'csrfCookie' => [
+                'sameSite' => yii\web\Cookie::SAME_SITE_NONE,
+                'secure' => true,
+                'httpOnly' => true,
+            ],
 			'baseUrl'=> '',
             // !!! Сгенерировать и вставить ключ
             'cookieValidationKey' => '',
@@ -31,6 +36,12 @@ $config = [
         'user' => [
             'identityClass' => 'wm\admin\models\User',
             'enableAutoLogin' => true,
+            'identityCookie' => [
+                'name' => '_identity',
+                'httpOnly' => true,
+                'sameSite' => yii\web\Cookie::SAME_SITE_NONE, // Важно!
+                'secure' => true, // Требуется при SameSite=None
+            ],
         ],
         'errorHandler' => [
             'errorAction' => 'site/error',
